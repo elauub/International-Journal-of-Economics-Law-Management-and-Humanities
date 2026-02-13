@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>ScienceNexus | Revue Scientifique Internationale</title>
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #38a169;
+            --bg: #ffffff;
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--secondary); margin: 0; }
+        
+        header { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: 500; }
+        
+        .hero { background: #f8fafc; padding: 4rem 5%; border-bottom: 1px solid #e2e8f0; }
+        .container { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding: 2rem 5%; }
+        
+        .article-card { border-bottom: 1px solid #edf2f7; padding: 1.5rem 0; }
+        .article-card h2 { color: var(--primary); margin-bottom: 0.5rem; }
+        .meta { font-size: 0.9rem; color: #718096; margin-bottom: 1rem; }
+        .badge { background: #ebf8ff; color: #3182ce; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; }
+        
+        .sidebar { background: #f7fa3; padding: 1.5rem; border-radius: 8px; }
+        .btn-submit { background: var(--accent); color: white; padding: 12px 24px; display: block; text-align: center; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ScienceNexus</h1>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Archives</a>
+        <a href="#">Comité</a>
+        <a href="#">Soumettre</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Revue Internationale des Sciences Appliquées</h1>
+    <p>Volume 12, Numéro 3 — Février 2026</p>
+</section>
+
+<div class="container">
+    <main>
+        <h3>Derniers Articles</h3>
+        
+        <article class="article-card">
+            <span class="badge">Physique Quantique</span>
+            <h2>Analyse de la décohérence dans les systèmes supraconducteurs</h2>
+            <div class="meta">Par Dr. Jean Dupont, Pr. Sarah Alami | Publié le 10 Fév 2026</div>
+            <p>Résumé : Cette étude explore les limites de la stabilité des qubits dans des environnements cryogéniques...</p>
+            <a href="#">Lire l'article complet (PDF)</a>
+        </article>
+
+        </main>
+
+    <aside>
+        <div class="sidebar">
+            <a href="#" class="btn-submit">Soumettre un Manuscrit</a>
+            <h4>Informations</h4>
+            <p><strong>ISSN:</strong> 2045-2322</p>
+            <p><strong>Impact Factor:</strong> 4.2</p>
+            <hr>
+            <h4>Appel à contributions</h4>
+            <p>Numéro spécial sur l'Intelligence Artificielle et l'Éthique. Date limite : 30 Mars 2026.</p>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>
