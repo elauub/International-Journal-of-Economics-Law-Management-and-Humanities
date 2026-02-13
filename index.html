@@ -3,79 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | Revue Scientifique</title>
+    <title>IJELMH | Revue Scientifique Internationale</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #1a365d; --accent: #c53030; --bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #2d3748; }
-        header { background: var(--primary); color: white; padding: 1.5rem 5%; border-bottom: 4px solid var(--accent); }
-        .header-content { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 20px; }
-        .logo-header { height: 70px; background: white; padding: 5px; border-radius: 5px; }
-        
-        .container { max-width: 1100px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #2d3748; scroll-behavior: smooth; }
+        header { background: var(--primary); color: white; padding: 1.5rem 5%; border-bottom: 4px solid var(--accent); position: sticky; top: 0; z-index: 1000; }
+        .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-header { height: 60px; background: white; padding: 5px; border-radius: 5px; }
+        nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 0.9rem; font-weight: bold; }
+
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media (max-width: 950px) { .container { grid-template-columns: 1fr; } }
         
         .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        /* Comité Éditorial Style */
+        .editorial-list { max-height: 400px; overflow-y: auto; padding-right: 10px; font-size: 0.85rem; border: 1px solid #eee; padding: 10px; border-radius: 5px; }
+        .editor-item { margin-bottom: 12px; border-bottom: 1px solid #f1f1f1; padding-bottom: 8px; }
+        .editor-name { font-weight: bold; color: var(--primary); display: block; }
+        .editor-aff { color: #666; font-style: italic; }
+
         .grid-domaines { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
-        .domaine { background: #edf2f7; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 0.9rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
+        .domaine { background: #edf2f7; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 0.8rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
         
         .annonce { text-align: center; border: 2px solid var(--primary); padding: 10px; border-radius: 10px; }
         .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px; }
         .deadline { background: var(--accent); color: white; padding: 10px; display: block; font-weight: bold; border-radius: 5px; }
 
         input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
-        .btn { background: var(--accent); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; }
-        footer { text-align: center; padding: 2rem; background: #eee; margin-top: 30px; }
+        .btn { background: var(--accent); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #a02626; }
+        footer { text-align: center; padding: 2.5rem; background: #1a365d; color: white; margin-top: 30px; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="header-content">
-        <img src="logo.png" alt="Logo IJELMH" class="logo-header">
-        <div>
-            <h1 style="margin:0; font-size: 1.4rem;">International-Journal of Economics Law Management and Humanities</h1>
-            <p style="margin:5px 0 0 0; opacity: 0.9;">Revue Scientifique Mensuelle | Français - English</p>
+        <div class="logo-area">
+            <img src="logo.png" alt="Logo IJELMH" class="logo-header">
+            <h1 style="margin:0; font-size: 1.2rem; line-height: 1.2;">IJELMH Journal</h1>
         </div>
+        <nav>
+            <a href="#about">À Propos</a>
+            <a href="#editorial">Comité</a>
+            <a href="#soumission">Soumission</a>
+        </nav>
     </div>
 </header>
 
 <div class="container">
     <main>
-        <section class="card">
+        <section id="about" class="card">
             <h2>Champs de Recherche & Langues</h2>
-            <p>L’<strong>IJELMH</strong> est une revue multidisciplinaire internationale qui publie chaque mois des travaux de haute qualité en <strong>Français</strong> et en <strong>Anglais</strong> dans les domaines suivants :</p>
-            
+            <p>L’<strong>IJELMH</strong> est une revue multidisciplinaire internationale qui publie des travaux d'excellence en <strong>Français</strong> et en <strong>Anglais</strong>.</p>
             <div class="grid-domaines">
                 <div class="domaine">Économie & Gestion</div>
                 <div class="domaine">Droit</div>
                 <div class="domaine">Sciences Humaines</div>
             </div>
-
-            <p style="font-style: italic; color: #4a5568; border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 20px;">
+            <p style="font-style: italic; font-size: 0.9rem; color: #4a5568; border-left: 4px solid var(--primary); padding-left: 15px;">
                 The journal accepts original research papers in English and French covering Economics, Management, Law, and Social Sciences.
             </p>
         </section>
 
-        <section class="card">
-            <h3>Dernières Publications</h3>
-            <p style="text-align: center; color: #718096; padding: 20px;">
-                <strong>Volume 1, Numéro 1 (Mars 2026)</strong><br>
-                Le premier numéro est en cours de constitution.
-            </p>
+        <section id="editorial" class="card">
+            <h3>Comité Éditorial & Peer Review</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 15px;">Notre conseil d'évaluation est composé d'experts internationaux garantissant la rigueur scientifique :</p>
+            <div class="editorial-list">
+                <div class="editor-item"><span class="editor-name">Dr. Milorad Wang</span><span class="editor-aff">USA</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Mokhtar Beidjehem</span><span class="editor-aff">France</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Ehssan Nassef</span><span class="editor-aff">Egypt</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Fateh Mebarek-Oudina</span><span class="editor-aff">Algeria</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Rajib Kumar Sanyal</span><span class="editor-aff">Associate Professor of Economics, India</span></div>
+                <div class="editor-item"><span class="editor-name">Prof. Dr. Suha Shihab</span><span class="editor-aff">University of Technology, Baghdad, Iraq</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Maroof Bin Rauf</span><span class="editor-aff">University of Karachi, Pakistan</span></div>
+                <div class="editor-item"><span class="editor-name">Prof. Dr. Alireza Heidari</span><span class="editor-aff">California South University (CSU), USA</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Nana Charles Nguindip</span><span class="editor-aff">University of Dschang, Cameroon</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Zivanai Mazhambe, CPA(Z)</span><span class="editor-aff">Senior Lecturer, Faculty of Commerce</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Tanvir Abir</span><span class="editor-aff">Associate Professor, IUBAT, Bangladesh</span></div>
+                <div class="editor-item"><span class="editor-name">Dr. Shahzad Mushtaq</span><span class="editor-aff">Assistant Professor (Economics), Okara University</span></div>
+            </div>
+            <p style="font-size: 0.75rem; color: #777; margin-top: 10px;">* Liste non exhaustive des membres du comité de lecture international.</p>
         </section>
     </main>
 
     <aside>
         <div class="card annonce">
             <h4 style="margin-top:0; color: var(--primary);">📢 APPEL À PUBLICATION</h4>
-            <img src="page de garde num 1" alt="Appel Mars 2026">
+            <img src="page de garde num 1" alt="Appel Mars 2026" onerror="this.src='https://via.placeholder.com/300x400?text=IJELMH+Mars+2026'">
             <span class="deadline">Limite : 27 Février 2026</span>
         </div>
 
-        <div class="card">
-            <h3 style="margin-top:0;">Soumettre un Article</h3>
-            <p style="background: #fff5f5; padding: 10px; border-radius: 5px; font-weight: bold; text-align: center;">Frais : 70 EUROS</p>
+        <div id="soumission" class="card">
+            <h3 style="margin-top:0;">Soumission</h3>
+            <p style="background: #ebf8ff; padding: 10px; border-radius: 5px; font-weight: bold; text-align: center; color: var(--primary);">Frais : 70 EUROS</p>
             <form action="https://formspree.io/f/revue.ijelmh@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="text" name="nom" placeholder="Nom Complet / Full Name" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -84,17 +108,23 @@
                     <option value="Français">Français</option>
                     <option value="Anglais">Anglais</option>
                 </select>
-                <label style="font-size: 0.8rem; font-weight: bold;">Manuscrit (PDF) :</label>
+                <input type="text" name="titre" placeholder="Titre de l'article" required>
+                <label style="font-size: 0.8rem; font-weight: bold;">Fichier PDF :</label>
                 <input type="file" name="fichier" accept=".pdf" required>
-                <button type="submit" class="btn">Envoyer l'article</button>
+                <button type="submit" class="btn">Envoyer le Manuscrit</button>
             </form>
+        </div>
+
+        <div class="card" style="font-size: 0.85rem; background: var(--primary); color: white; text-align: center;">
+            <p style="margin:0;">📧 revue.ijelmh@gmail.com</p>
+            <p style="margin:5px 0 0 0;">📞 WhatsApp : +212 6 63 17 93 41</p>
         </div>
     </aside>
 </div>
 
 <footer>
-    <p>📧 revue.ijelmh@gmail.com | 📞 WhatsApp : +212 6 63 17 93 41</p>
-    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 IJELMH Journal. Tous droits réservés.</p>
+    <p><strong>IJELMH Journal</strong> - International Scientific Publication</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Tous droits réservés. | ISSN : En cours d'attribution</p>
 </footer>
 
 </body>
