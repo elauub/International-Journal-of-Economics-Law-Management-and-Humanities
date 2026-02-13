@@ -101,4 +101,74 @@
 
         <section id="about" class="card">
             <h2>À Propos de la Revue</h2>
-            <p>IJELMH est une revue internationale à comité de lecture (Peer-Review) qui publie des recherches originales en économie, droit, management et
+            <p>IJELMH est une revue internationale à comité de lecture (Peer-Review) qui publie des recherches originales en économie, droit, management et sciences humaines. Nous favorisons l'accès libre (Open Access) pour diffuser le savoir au plus grand nombre.</p>
+        </section>
+
+        <section id="comite" class="card">
+            <h2>Comité Éditorial</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Membre</th>
+                        <th>Institution</th>
+                        <th>Spécialité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>[Nom de l'expert]</strong></td>
+                        <td>Université de...</td>
+                        <td>Économie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>[Nom de l'expert]</strong></td>
+                        <td>Faculté de Droit</td>
+                        <td>Droit International</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <aside>
+        <div id="soumission" class="card">
+            <h3 style="margin-top:0; color:var(--accent);">Soumettre un Manuscrit</h3>
+            <p style="font-size: 0.85rem;">Utilisez ce formulaire pour envoyer votre fichier PDF à notre comité éditorial.</p>
+            <form action="https://formspree.io/f/xwvnlzpl" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Nom complet de l'auteur</label>
+                    <input type="text" name="nom" required placeholder="Ex: Dr. Ahmed Mansouri">
+                </div>
+                <div class="form-group">
+                    <label>Email de contact</label>
+                    <input type="email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Titre de l'article</label>
+                    <input type="text" name="titre_article" required>
+                </div>
+                <div class="form-group">
+                    <label>Fichier PDF (max 10Mo)</label>
+                    <input type="file" name="fichier" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer pour évaluation</button>
+            </form>
+        </div>
+
+        <div class="card" style="font-size: 0.85rem; border-top: 3px solid var(--primary);">
+            <h4>Informations Revue</h4>
+            <p><strong>Périodicité :</strong> Trimestrielle<br>
+            <strong>Langues :</strong> FR / EN<br>
+            <strong>ISSN :</strong> En cours d'attribution</p>
+            <hr style="border:0; border-top:1px solid #eee;">
+            <a href="template.docx" style="color: var(--primary); font-weight: bold; text-decoration: none;">📥 Télécharger le Modèle Word</a>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <p>&copy; 2026 International-Journal of Economics Law Management and Humanities (IJELMH)<br>Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
