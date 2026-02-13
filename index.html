@@ -14,7 +14,7 @@
         
         .logo-area { display: flex; align-items: center; gap: 15px; }
         .logo-header { height: 55px; background: white; padding: 5px; border-radius: 5px; }
-        .journal-title-main { margin: 0; font-size: 1.1rem; line-height: 1.3; font-family: 'Lora', serif; max-width: 400px; }
+        .journal-title-main { margin: 0; font-size: 1.1rem; line-height: 1.3; font-family: 'Lora', serif; max-width: 450px; }
 
         nav { display: flex; gap: 10px; }
         nav a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3); padding: 7px 12px; border-radius: 4px; transition: 0.3s; }
@@ -24,24 +24,30 @@
         @media (max-width: 950px) { .container { grid-template-columns: 1fr; } }
         
         .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        
-        h2 { color: var(--primary); font-family: 'Lora', serif; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2, h3 { color: var(--primary); font-family: 'Lora', serif; border-bottom: 2px solid #eee; padding-bottom: 10px; }
 
         .grid-domaines { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
         .domaine { background: #f1f5f9; padding: 15px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 0.85rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
         
+        /* Sidebar Styles */
         .annonce { text-align: center; border: 2px solid var(--primary); padding: 15px; border-radius: 10px; }
-        .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .deadline { background: var(--accent); color: white; padding: 12px; display: block; font-weight: bold; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; }
+        .deadline { background: var(--accent); color: white; padding: 12px; display: block; font-weight: bold; border-radius: 5px; text-transform: uppercase; }
 
+        /* Formulaire */
         .fee-tag { background: #ebf8ff; color: var(--primary); padding: 12px; border-radius: 6px; font-weight: bold; text-align: center; margin-bottom: 15px; border: 1px dashed var(--primary); }
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; }
+        .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
 
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; background: #fff; }
-        .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem; transition: 0.3s; }
-        .btn:hover { background: #a02626; transform: translateY(-1px); }
+        /* SECTION INDEXATION BAS DE PAGE */
+        .indexation-footer { background: white; padding: 30px 5%; border-top: 1px solid #eee; }
+        .indexation-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+        .indexation-text { flex: 1; min-width: 300px; }
+        .indexation-logos { flex: 1; min-width: 300px; display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; align-items: center; justify-items: center; }
+        .index-logo { max-width: 100px; height: auto; filter: grayscale(20%); transition: 0.3s; }
+        .index-logo:hover { filter: grayscale(0%); transform: scale(1.05); }
 
-        footer { text-align: center; padding: 3rem 1rem; background: #1a365d; color: white; margin-top: 50px; }
-        .footer-text { opacity: 0.9; font-size: 0.9rem; line-height: 1.6; }
+        footer { text-align: center; padding: 2rem; background: #1a365d; color: white; }
     </style>
 </head>
 <body>
@@ -64,70 +70,68 @@
     <main>
         <section class="card">
             <h2>Champs de Recherche & Langues</h2>
-            <p>L'<strong>International-Journal of Economics Law Management and Humanities</strong> est une plateforme scientifique d'excellence dédiée à la diffusion de recherches originales et innovantes.</p>
-            
+            <p>L'<strong>International-Journal of Economics Law Management and Humanities</strong> publie des recherches originales en <strong>Français</strong> et en <strong>Anglais</strong>.</p>
             <div class="grid-domaines">
                 <div class="domaine">Économie & Gestion</div>
                 <div class="domaine">Droit & Jurisprudence</div>
                 <div class="domaine">Sciences Humaines</div>
             </div>
-
-            <p style="font-style: italic; color: #4a5568; border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 20px;">
-                The journal welcomes high-quality original research papers in <strong>English</strong> and <strong>French</strong> covering the fields of Economics, Law, Management, and Humanities.
+            <p style="font-style: italic; color: #4a5568; border-left: 4px solid var(--primary); padding-left: 15px;">
+                The journal welcomes high-quality original research papers in English and French.
             </p>
-            <p>Chaque manuscrit est soumis à une évaluation rigoureuse par les pairs (Peer Review) afin de garantir les plus hauts standards académiques.</p>
         </section>
 
         <section class="card">
             <h3>Dernières Publications</h3>
-            <div style="text-align: center; padding: 30px; background: #fcfcfc; border: 1px solid #f1f1f1; border-radius: 8px;">
-                <p style="color: #718096; font-weight: 500;">Volume 1, Numéro 1 — Mars 2026</p>
-                <p style="font-size: 0.9rem; color: #a0aec0;">Le premier numéro est actuellement en phase de sélection des articles.</p>
-            </div>
+            <p style="text-align: center; color: #718096; padding: 20px;">Volume 1, Numéro 1 — Mars 2026 (En cours de préparation)</p>
         </section>
     </main>
 
     <aside>
         <div class="card annonce">
-            <h4 style="margin-top:0; color: var(--primary); text-transform: uppercase; font-size: 0.9rem;">Appel à Publication</h4>
-            <img src="page de garde num 1" alt="Page de garde Numéro 1 Mars 2026">
+            <h4>Appel à Publication</h4>
+            <img src="page de garde num 1" alt="Page de garde Mars 2026">
             <span class="deadline">Limite : 27 Février 2026</span>
         </div>
 
         <div id="soumission" class="card">
-            <h3 style="margin-top:0; font-size: 1.2rem;">Soumettre un Article</h3>
-            <div class="fee-tag">Frais de publication : 70 EUROS</div>
-            
+            <h3>Soumission</h3>
+            <div class="fee-tag">Frais : 70 EUROS</div>
             <form action="https://formspree.io/f/revue.ijelmh@gmail.com" method="POST" enctype="multipart/form-data">
-                <input type="text" name="nom_complet" placeholder="Nom Complet / Full Name" required>
-                <input type="email" name="email_auteur" placeholder="Email" required>
-                <select name="langue_manuscrit" required>
-                    <option value="">Langue de l'article / Language</option>
+                <input type="text" name="nom" placeholder="Nom Complet" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="langue" required>
+                    <option value="">Langue / Language</option>
                     <option value="Français">Français</option>
                     <option value="Anglais">Anglais</option>
                 </select>
-                <input type="text" name="titre_article" placeholder="Titre de l'article" required>
-                
-                <label style="font-size: 0.75rem; font-weight: bold; color: #718096;">Télécharger le manuscrit (Format PDF uniquement) :</label>
-                <input type="file" name="fichier_manuscrit" accept=".pdf" required>
-                
-                <button type="submit" class="btn">Soumettre pour évaluation</button>
+                <input type="file" name="manuscrit" accept=".pdf" required>
+                <button type="submit" class="btn">Soumettre l'article</button>
             </form>
-        </div>
-
-        <div class="card" style="background: var(--primary); color: white; text-align: center; padding: 15px;">
-            <p style="margin: 0; font-size: 0.85rem;">📧 revue.ijelmh@gmail.com</p>
-            <p style="margin: 8px 0 0 0; font-size: 0.85rem;">📞 WhatsApp : +212 6 63 17 93 41</p>
         </div>
     </aside>
 </div>
 
-<footer>
-    <div class="footer-text">
-        <p><strong>International-Journal of Economics Law Management and Humanities</strong></p>
-        <p>Revue Scientifique Internationale Mensuelle</p>
-        <p style="margin-top: 25px; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Tous droits réservés. | ISSN : En cours d'attribution</p>
+<section class="indexation-footer">
+    <div class="indexation-container">
+        <div class="indexation-text">
+            <h3 style="margin-top:0;">Indexation & Visibilité</h3>
+            <p style="font-size: 0.9rem; color: #555;">L'<strong>International-Journal of Economics Law Management and Humanities</strong> s'engage à assurer la plus large diffusion possible des travaux publiés. La revue est indexée et référencée par les bases de données suivantes :</p>
+        </div>
+        <div class="indexation-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" class="index-logo" alt="Google Scholar">
+            <img src="https://www.crossref.org/wp-content/uploads/2023/05/crossref-logo-landscape-200.png" class="index-logo" alt="CrossRef">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/ORCID_logo.svg/1200px-ORCID_logo.svg.png" class="index-logo" alt="ORCID">
+            <img src="https://road.issn.org/sites/all/themes/issn_theme/logo.png" class="index-logo" alt="ROAD">
+            <img src="https://www.doi.org/img/doi_logo.png" class="index-logo" alt="DOI">
+            <img src="https://s3.amazonaws.com/clarivate-libguides-prod/6909623/InCites_Banner.png?v=1543338308" class="index-logo" alt="Clarivate">
+        </div>
     </div>
+</section>
+
+<footer>
+    <p><strong>International-Journal of Economics Law Management and Humanities</strong></p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Tous droits réservés. | Contact : revue.ijelmh@gmail.com</p>
 </footer>
 
 </body>
