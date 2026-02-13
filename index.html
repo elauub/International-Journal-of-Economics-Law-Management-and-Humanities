@@ -1,35 +1,146 @@
-<section id="comite" class="card">
-    <h2>Comité Éditorial</h2>
-    <p style="font-size: 0.9rem; color: #718096; margin-bottom: 1.5rem;">
-        Notre comité est composé d'experts internationaux garantissant la rigueur scientifique de chaque publication.
-    </p>
-    
-    <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
-            <thead>
-                <tr style="background: #edf2f7; color: var(--primary);">
-                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Nom & Prénom</th>
-                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Institution / Université</th>
-                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Spécialité</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Éditeur en Chef]</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Université de [Ville], [Pays]</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Économie & Management</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Expert]</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">École de Droit de [Ville]</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Droit International</td>
-                </tr>
-                <tr>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Expert]</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Faculté des Sciences Humaines</td>
-                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Sociologie & Éthique</td>
-                </tr>
-            </tbody>
-        </table>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJELMH | International-Journal of Economics Law Management and Humanities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d3748;
+            --accent: #c53030;
+            --bg: #f8fafc;
+        }
+
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--secondary); margin: 0; background-color: var(--bg); }
+        h1, h2, h3 { font-family: 'Lora', serif; color: var(--primary); }
+
+        /* Header avec Logo */
+        header { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; }
+        .logo-container { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 1rem; }
+        .logo-img { height: 70px; width: auto; border-radius: 4px; background: white; padding: 5px; }
+        header h1 { margin: 0; font-size: 1.5rem; max-width: 800px; }
+
+        nav { margin-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        nav a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
+        nav a:hover { background: rgba(255,255,255,0.1); }
+
+        .container { display: flex; flex-direction: column; max-width: 1200px; margin: 2rem auto; padding: 0 5%; gap: 30px; }
+        
+        @media (min-width: 950px) {
+            .container { flex-direction: row; }
+            main { flex: 2; }
+            aside { flex: 1; }
+        }
+
+        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+
+        /* Style des articles publiés */
+        .article-card { border-left: 5px solid var(--primary); transition: transform 0.2s; }
+        .article-card:hover { transform: translateY(-3px); }
+        .article-meta { font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
+        .article-title { font-size: 1.3rem; margin: 10px 0; line-height: 1.3; }
+        .article-authors { font-style: italic; color: #4a5568; margin-bottom: 15px; display: block; }
+        
+        .btn-download { 
+            display: inline-flex; 
+            align-items: center; 
+            background: var(--primary); 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 0.9rem; 
+            font-weight: bold;
+        }
+
+        /* Formulaire */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-size: 0.85rem; font-weight: bold; margin-bottom: 5px; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 4px; box-sizing: border-box; }
+        .btn-submit { background: var(--accent); color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; }
+
+        footer { text-align: center; padding: 3rem; color: #718096; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="IJELMH Logo" class="logo-img" onerror="this.style.display='none'">
+        <h1>International-Journal of Economics Law Management and Humanities</h1>
     </div>
-</section>
+    <nav>
+        <a href="#articles">Articles Publiés</a>
+        <a href="#about">À Propos</a>
+        <a href="#soumission">Soumettre un Article</a>
+        <a href="#comite">Comité Éditorial</a>
+    </nav>
+</header>
+
+<div class="container">
+    <main>
+        <section id="articles">
+            <h2>Dernières Publications</h2>
+
+            <div class="card article-card">
+                <div class="article-meta">Vol. 1, No. 1 (2026)</div>
+                <h3 class="article-title">Titre de votre premier article scientifique ici</h3>
+                <span class="article-authors">Par : Dr. Jean Dupont (Université de Paris) & Pr. Sarah Alami (Université de Rabat)</span>
+                <p>Résumé : Cette étude analyse les corrélations entre le droit numérique et les stratégies de management en Afrique du Nord...</p>
+                <a href="VOTRE_FICHIER_1.pdf" target="_blank" class="btn-download">📄 Télécharger le PDF</a>
+            </div>
+
+            <div class="card article-card">
+                <div class="article-meta">Vol. 1, No. 1 (2026)</div>
+                <h3 class="article-title">Impact des politiques monétaires sur les PME : Une approche pluridisciplinaire</h3>
+                <span class="article-authors">Par : Dr. Ahmed Mansour (HEC Montréal)</span>
+                <p>Résumé : Ce travail de recherche explore les défis financiers rencontrés par les petites entreprises lors des crises de liquidité...</p>
+                <a href="VOTRE_FICHIER_2.pdf" target="_blank" class="btn-download">📄 Télécharger le PDF</a>
+            </div>
+
+        </section>
+
+        <section id="about" class="card">
+            <h3>À Propos de IJELMH</h3>
+            <p>IJELMH est une revue internationale à comité de lecture dédiée à la promotion de la recherche d'excellence. Elle offre un espace de publication libre (Open Access) pour les travaux originaux croisant économie, droit et sciences humaines.</p>
+        </section>
+    </main>
+
+    <aside>
+        <div id="soumission" class="card" style="border-top: 4px solid var(--accent);">
+            <h3>Soumission PDF</h3>
+            <p style="font-size: 0.8rem;">Envoyez votre manuscrit pour évaluation par nos experts.</p>
+            <form action="https://formspree.io/f/xwvnlzpl" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Auteur Principal</label>
+                    <input type="text" name="nom" placeholder="Nom et Prénom" required>
+                </div>
+                <div class="form-group">
+                    <label>Titre de l'article</label>
+                    <input type="text" name="titre" required>
+                </div>
+                <div class="form-group">
+                    <label>Fichier (PDF uniquement)</label>
+                    <input type="file" name="manuscrit" accept=".pdf" required>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer le Manuscrit</button>
+            </form>
+        </div>
+
+        <div class="card" style="font-size: 0.9rem;">
+            <h4>Infos Pratiques</h4>
+            <p><strong>ISSN :</strong> En cours<br>
+            <strong>Périodicité :</strong> Trimestrielle<br>
+            <strong>Langues :</strong> Français, Anglais</p>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <p>&copy; 2026 IJELMH Journal - International-Journal of Economics Law Management and Humanities</p>
+</footer>
+
+</body>
+</html>
