@@ -27,8 +27,9 @@
         .deadline { background: var(--accent); color: white; padding: 12px; display: block; font-weight: bold; border-radius: 5px; text-transform: uppercase; }
         .consignes-link { display: block; background: #2d3748; color: white; text-align: center; padding: 12px; margin-bottom: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
         .fee-tag { background: #ebf8ff; color: var(--primary); padding: 12px; border-radius: 6px; font-weight: bold; text-align: center; margin-bottom: 15px; border: 1px dashed var(--primary); }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; }
-        .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; text-align: center; text-decoration: none; display: block; }
+        .btn:hover { background: #a92828; }
+        
         .indexation-footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; margin-top: 20px; }
         .indexation-container { max-width: 1200px; margin: 0 auto; text-align: center; }
         .indexation-logos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: center; margin-top: 20px; }
@@ -77,28 +78,27 @@
     <aside>
         <div class="card annonce">
             <h4>Appel à Publication</h4>
-            <img src="page%20de%20garde%20num%201.png" alt="Appel à publication Mars 2026">
+            <img src="page%20de%20garde%20num%201" alt="Appel à publication Mars 2026">
             <span class="deadline">LIMITE : 27 FÉVRIER 2026</span>
         </div>
 
         <div id="soumission" class="card">
-            <h3>Soumission</h3>
-            <a href="consignes.html" class="consignes-link">📖 Lire les Consignes de Recherche</a>
-            <a href="Template.docx" style="text-decoration:none; color:var(--primary); font-size:0.8rem; display:block; text-align:center; margin-bottom:15px;" download>📥 Télécharger le Template</a>
+            <h3>Soumission d'Article</h3>
+            <p style="font-size: 0.85rem; color: #4a5568; margin-bottom: 15px;">
+                Veuillez préparer votre manuscrit selon le template officiel avant de soumettre.
+            </p>
+            <a href="consignes.html" class="consignes-link">📖 Lire les Consignes</a>
+            <a href="Template.docx" style="text-decoration:none; color:var(--primary); font-size:0.85rem; display:block; text-align:center; margin-bottom:15px; font-weight:bold;" download>📥 Télécharger le Template (.docx)</a>
             
-            <div class="fee-tag">Frais : 70 EUROS</div>
+            <div class="fee-tag">Frais de publication : 70 EUROS</div>
+
+            <a href="https://forms.gle/r5hc5AAqNPgQujVX7" target="_blank" class="btn">
+                🚀 Soumettre mon Article
+            </a>
             
-            <form action="https://formspree.io/f/mvzbkjrr" method="POST" enctype="multipart/form-data">
-                <input type="text" name="nom" placeholder="Nom Complet" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <select name="langue" required>
-                    <option value="">Langue / Language</option>
-                    <option value="Français">Français</option>
-                    <option value="Anglais">Anglais</option>
-                </select>
-                <input type="file" name="manuscrit" accept=".pdf,.doc,.docx" required>
-                <button type="submit" class="btn">Soumettre l'article</button>
-            </form>
+            <p style="font-size: 0.75rem; text-align:center; margin-top:15px; color:#718096;">
+                Contact assistance : revue.ijelmh@gmail.com
+            </p>
         </div>
     </aside>
 </div>
