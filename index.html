@@ -8,48 +8,31 @@
     <style>
         :root { --primary: #1a365d; --accent: #c53030; --bg: #f8fafc; }
         body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #2d3748; scroll-behavior: smooth; }
-        
         header { background: var(--primary); color: white; padding: 1.2rem 5%; border-bottom: 4px solid var(--accent); position: sticky; top: 0; z-index: 1000; }
         .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
-        
         .logo-area { display: flex; align-items: center; gap: 15px; }
         .logo-header { height: 55px; background: white; padding: 5px; border-radius: 5px; }
         .journal-title-main { margin: 0; font-size: 1.1rem; line-height: 1.3; font-family: 'Lora', serif; max-width: 450px; }
-
         nav { display: flex; gap: 10px; }
         nav a { color: white; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3); padding: 7px 12px; border-radius: 4px; transition: 0.3s; }
         nav a:hover { background: var(--accent); border-color: var(--accent); }
-
         .container { max-width: 1200px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
         @media (max-width: 950px) { .container { grid-template-columns: 1fr; } }
-        
         .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
         h2, h3 { color: var(--primary); font-family: 'Lora', serif; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-
         .grid-domaines { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
         .domaine { background: #f1f5f9; padding: 15px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 0.85rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
-        
-        /* Sidebar */
         .annonce { text-align: center; border: 2px solid var(--primary); padding: 15px; border-radius: 10px; }
         .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; }
         .deadline { background: var(--accent); color: white; padding: 12px; display: block; font-weight: bold; border-radius: 5px; text-transform: uppercase; }
-
-        /* Formulaire & Template */
         .fee-tag { background: #ebf8ff; color: var(--primary); padding: 12px; border-radius: 6px; font-weight: bold; text-align: center; margin-bottom: 15px; border: 1px dashed var(--primary); }
-        .template-btn { display: block; background: #2d3748; color: white; text-align: center; padding: 12px; margin-bottom: 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        .template-btn:hover { background: #4a5568; }
-        
+        .consignes-link { display: block; background: #2d3748; color: white; text-align: center; padding: 12px; margin-bottom: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
         input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; }
         .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-
-        /* Indexation */
         .indexation-footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; margin-top: 20px; }
         .indexation-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
-        .indexation-text { flex: 1; min-width: 300px; }
-        .indexation-logos { flex: 1; min-width: 300px; display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; align-items: center; }
-        .index-logo { height: 45px; width: auto; max-width: 140px; filter: grayscale(100%); opacity: 0.7; transition: 0.4s; display: block; }
-        .index-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
-
+        .indexation-logos { flex: 1; display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
+        .index-logo { height: 40px; filter: grayscale(100%); opacity: 0.7; }
         footer { text-align: center; padding: 2rem; background: #1a365d; color: white; }
     </style>
 </head>
@@ -64,7 +47,7 @@
         <nav>
             <a href="index.html">Accueil</a>
             <a href="comite.html">Comité Éditorial</a>
-            <a href="#soumission">Soumission</a>
+            <a href="consignes.html">Consignes</a>
         </nav>
     </div>
 </header>
@@ -72,8 +55,8 @@
 <div class="container">
     <main>
         <section class="card">
-            <h2>Champs de Recherche & Langues</h2>
-            <p>L'<strong>International-Journal of Economics Law Management and Humanities</strong> publie des recherches originales en <strong>Français</strong> et en <strong>Anglais</strong>.</p>
+            <h2>À Propos de la Revue</h2>
+            <p>L'<strong>International-Journal of Economics Law Management and Humanities</strong> est une plateforme dédiée à l'excellence académique.</p>
             <div class="grid-domaines">
                 <div class="domaine">Économie & Gestion</div>
                 <div class="domaine">Droit & Jurisprudence</div>
@@ -85,9 +68,8 @@
         </section>
 
         <section class="card">
-            <h3>Consignes aux Auteurs</h3>
-            <p>Les auteurs doivent préparer leur manuscrit en suivant strictement le modèle de la revue[cite: 27]. La première page doit être réservée au titre, aux mots-clés et au résumé, le corps du texte commençant à la deuxième page[cite: 17, 18].</p>
-            <p>Le personnel de l'<strong>IJELMH</strong> se chargera de la révision et de la mise en forme finale de votre article après acceptation[cite: 31].</p>
+            <h3>Dernières Publications</h3>
+            <p style="text-align: center; color: #718096; padding: 20px;">Volume 1, Numéro 1 — Mars 2026 (En préparation)</p>
         </section>
     </main>
 
@@ -100,11 +82,10 @@
 
         <div id="soumission" class="card">
             <h3>Soumission</h3>
-            
-            <a href="Template.docx" class="template-btn" download>📥 Télécharger le Modèle (Template)</a>
+            <a href="consignes.html" class="consignes-link">📖 Lire les Consignes de Recherche</a>
+            <a href="Template.docx" style="text-decoration:none; color:var(--primary); font-size:0.8rem; display:block; text-align:center; margin-bottom:15px;" download>📥 Télécharger le Template</a>
             
             <div class="fee-tag">Frais : 70 EUROS</div>
-            
             <form action="https://formspree.io/f/revue.ijelmh@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="text" name="nom" placeholder="Nom Complet" required>
                 <input type="email" name="email" placeholder="Email" required>
@@ -113,7 +94,6 @@
                     <option value="Français">Français</option>
                     <option value="Anglais">Anglais</option>
                 </select>
-                <label style="font-size: 0.7rem; color: #666;">Joindre votre article (PDF/DOCX) :</label>
                 <input type="file" name="manuscrit" accept=".pdf,.doc,.docx" required>
                 <button type="submit" class="btn">Soumettre l'article</button>
             </form>
@@ -123,15 +103,10 @@
 
 <section class="indexation-footer">
     <div class="indexation-container">
-        <div class="indexation-text">
-            <h3 style="margin-top:0;">Indexation & Visibilité</h3>
-            <p style="font-size: 0.9rem; color: #555;">La revue est indexée et référencée par les bases de données internationales (Google Scholar, CrossRef, ORCID, ISSN, DOI).</p>
-        </div>
         <div class="indexation-logos">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" class="index-logo" alt="Google Scholar">
             <img src="https://static.crossref.org/branding/logo/crossref-logo-landscape-200.png" class="index-logo" alt="CrossRef">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/ORCID_logo.svg/1024px-ORCID_logo.svg.png" class="index-logo" alt="ORCID">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ISSN_logo.svg/512px-ISSN_logo.svg.png" class="index-logo" alt="ISSN">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Doi_logo.svg/1024px-Doi_logo.svg.png" class="index-logo" alt="DOI">
         </div>
     </div>
