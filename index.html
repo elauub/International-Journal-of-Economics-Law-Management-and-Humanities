@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | International-Journal of Economics Law Management and Humanities</title>
+    <title>IJELMH | Revue Scientifique Internationale</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -16,140 +16,89 @@
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--secondary); margin: 0; background-color: var(--bg); }
         h1, h2, h3 { font-family: 'Lora', serif; color: var(--primary); }
 
-        /* Header avec Logo */
-        header { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; }
-        .logo-container { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 1rem; }
-        .logo-img { height: 70px; width: auto; border-radius: 4px; background: white; padding: 5px; }
-        header h1 { margin: 0; font-size: 1.5rem; max-width: 800px; }
+        /* Header avec Logo et Titre */
+        header { background: var(--primary); color: white; padding: 2rem 5%; border-bottom: 4px solid var(--accent); }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        
+        .brand { display: flex; align-items: center; gap: 20px; }
+        .logo-img { height: 90px; width: auto; background: white; padding: 5px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .brand-text { border-left: 2px solid rgba(255,255,255,0.3); padding-left: 20px; }
+        .brand-text h1 { margin: 0; color: white; font-size: 1.6rem; line-height: 1.2; }
+        .brand-text span { color: #cbd5e0; font-size: 1rem; letter-spacing: 3px; font-weight: bold; }
 
-        nav { margin-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        nav a { color: #e2e8f0; text-decoration: none; font-size: 0.85rem; padding: 6px 12px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; }
-        nav a:hover { background: rgba(255,255,255,0.1); }
+        nav { display: flex; gap: 10px; flex-wrap: wrap; }
+        nav a { color: white; text-decoration: none; font-size: 0.85rem; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; transition: 0.3s; }
+        nav a:hover { background: rgba(255,255,255,0.1); border-color: white; }
+        nav a.active { background: var(--accent); border-color: var(--accent); font-weight: bold; }
 
+        /* Mise en page principale */
         .container { display: flex; flex-direction: column; max-width: 1200px; margin: 2rem auto; padding: 0 5%; gap: 30px; }
-        
-        @media (min-width: 950px) {
-            .container { flex-direction: row; }
-            main { flex: 2; }
-            aside { flex: 1; }
-        }
+        @media (min-width: 950px) { .container { flex-direction: row; } main { flex: 2; } aside { flex: 1; } }
 
-        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
 
-        /* Style des articles publiés */
-        .article-card { border-left: 5px solid var(--primary); transition: transform 0.2s; }
-        .article-card:hover { transform: translateY(-3px); }
-        .article-meta { font-size: 0.8rem; color: var(--accent); font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
-        .article-title { font-size: 1.3rem; margin: 10px 0; line-height: 1.3; }
-        .article-authors { font-style: italic; color: #4a5568; margin-bottom: 15px; display: block; }
-        
-        .btn-download { 
-            display: inline-flex; 
-            align-items: center; 
-            background: var(--primary); 
-            color: white; 
-            padding: 10px 20px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-size: 0.9rem; 
-            font-weight: bold;
-        }
+        /* Articles */
+        .article-card { border-left: 5px solid var(--primary); }
+        .article-meta { font-size: 0.8rem; color: var(--accent); font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+        .article-authors { font-style: italic; color: #4a5568; display: block; margin-bottom: 15px; }
+        .btn-download { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.9rem; }
 
         /* Formulaire */
         .form-group { margin-bottom: 15px; }
         label { display: block; font-size: 0.85rem; font-weight: bold; margin-bottom: 5px; }
-        input, textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 4px; box-sizing: border-box; }
-        .btn-submit { background: var(--accent); color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e0; border-radius: 4px; box-sizing: border-box; font-family: inherit; }
+        .btn-submit { background: var(--accent); color: white; border: none; padding: 14px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1rem; }
 
-        footer { text-align: center; padding: 3rem; color: #718096; font-size: 0.85rem; }
+        /* Tableau Comité */
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem; }
+        th { background: #edf2f7; text-align: left; padding: 12px; color: var(--primary); }
+        td { padding: 12px; border-bottom: 1px solid #edf2f7; }
+
+        footer { text-align: center; padding: 3rem; color: #718096; border-top: 1px solid #e2e8f0; margin-top: 4rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="logo.png" alt="IJELMH Logo" class="logo-img" onerror="this.style.display='none'">
-        <h1>International-Journal of Economics Law Management and Humanities</h1>
+    <div class="header-container">
+        <div class="brand">
+            <img src="logo.png" alt="Logo IJELMH" class="logo-img" onerror="this.style.display='none'">
+            <div class="brand-text">
+                <h1>International-Journal of Economics Law<br>Management and Humanities</h1>
+                <span>IJELMH</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#articles">Publications</a>
+            <a href="#about">À Propos</a>
+            <a href="#comite">Comité</a>
+            <a href="#soumission" class="active">Soumettre un Article</a>
+        </nav>
     </div>
-    <nav>
-        <a href="#articles">Articles Publiés</a>
-        <a href="#about">À Propos</a>
-        <a href="#soumission">Soumettre un Article</a>
-        <a href="#comite">Comité Éditorial</a>
-    </nav>
 </header>
 
 <div class="container">
     <main>
         <section id="articles">
             <h2>Dernières Publications</h2>
-
-            <div class="card article-card">
-                <div class="article-meta">Vol. 1, No. 1 (2026)</div>
-                <h3 class="article-title">Titre de votre premier article scientifique ici</h3>
-                <span class="article-authors">Par : Dr. Jean Dupont (Université de Paris) & Pr. Sarah Alami (Université de Rabat)</span>
-                <p>Résumé : Cette étude analyse les corrélations entre le droit numérique et les stratégies de management en Afrique du Nord...</p>
-                <a href="VOTRE_FICHIER_2.pdf" target="_blank" class="btn-download">📄 Télécharger le PDF</a>
-            </div>
             
-            <div class="card article-card">
+            <article class="card article-card">
                 <div class="article-meta">Vol. 1, No. 1 (2026)</div>
-                <h3 class="article-title">Titre de votre premier article scientifique ici</h3>
-                <span class="article-authors">Par : Dr. Jean Dupont (Université de Paris) & Pr. Sarah Alami (Université de Rabat)</span>
-                <p>Résumé : Cette étude analyse les corrélations entre le droit numérique et les stratégies de management en Afrique du Nord...</p>
-                <a href="VOTRE_FICHIER_3.pdf" target="_blank" class="btn-download">📄 Télécharger le PDF</a>
-            </div>
+                <h3>Analyse de la croissance économique et du cadre juridique des affaires</h3>
+                <span class="article-authors">Par : Dr. Jean Dupont (Université de Paris)</span>
+                <p>Résumé : Cette recherche explore l'interaction entre les réformes législatives et la performance des entreprises dans les marchés émergents...</p>
+                <a href="article1.pdf" target="_blank" class="btn-download">📄 Lire l'article complet (PDF)</a>
+            </article>
 
-            <div class="card article-card">
+            <article class="card article-card">
                 <div class="article-meta">Vol. 1, No. 1 (2026)</div>
-                <h3 class="article-title">Impact des politiques monétaires sur les PME : Une approche pluridisciplinaire</h3>
-                <span class="article-authors">Par : Dr. Ahmed Mansour (HEC Montréal)</span>
-                <p>Résumé : Ce travail de recherche explore les défis financiers rencontrés par les petites entreprises lors des crises de liquidité...</p>
-                <a href="VOTRE_FICHIER_2.pdf" target="_blank" class="btn-download">📄 Télécharger le PDF</a>
-            </div>
-
+                <h3>Management des ressources humaines à l'ère du numérique</h3>
+                <span class="article-authors">Par : Pr. Sarah Alami (Université de Rabat)</span>
+                <p>Résumé : Une étude approfondie sur l'impact de l'intelligence artificielle sur les processus de recrutement et de gestion de carrière...</p>
+                <a href="article2.pdf" target="_blank" class="btn-download">📄 Lire l'article complet (PDF)</a>
+            </article>
         </section>
 
         <section id="about" class="card">
-            <h3>À Propos de IJELMH</h3>
-            <p>IJELMH est une revue internationale à comité de lecture dédiée à la promotion de la recherche d'excellence. Elle offre un espace de publication libre (Open Access) pour les travaux originaux croisant économie, droit et sciences humaines.</p>
-        </section>
-    </main>
-
-    <aside>
-        <div id="soumission" class="card" style="border-top: 4px solid var(--accent);">
-            <h3>Soumission PDF</h3>
-            <p style="font-size: 0.8rem;">Envoyez votre manuscrit pour évaluation par nos experts.</p>
-            <form action="https://formspree.io/f/xwvnlzpl" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label>Auteur Principal</label>
-                    <input type="text" name="nom" placeholder="Nom et Prénom" required>
-                </div>
-                <div class="form-group">
-                    <label>Titre de l'article</label>
-                    <input type="text" name="titre" required>
-                </div>
-                <div class="form-group">
-                    <label>Fichier (PDF uniquement)</label>
-                    <input type="file" name="manuscrit" accept=".pdf" required>
-                </div>
-                <button type="submit" class="btn-submit">Envoyer le Manuscrit</button>
-            </form>
-        </div>
-
-        <div class="card" style="font-size: 0.9rem;">
-            <h4>Infos Pratiques</h4>
-            <p><strong>ISSN :</strong> En cours<br>
-            <strong>Périodicité :</strong> Trimestrielle<br>
-            <strong>Langues :</strong> Français, Anglais</p>
-        </div>
-    </aside>
-</div>
-
-<footer>
-    <p>&copy; 2026 IJELMH Journal - International-Journal of Economics Law Management and Humanities</p>
-</footer>
-
-</body>
-</html>
-
+            <h2>À Propos de la Revue</h2>
+            <p>IJELMH est une revue internationale à comité de lecture (Peer-Review) qui publie des recherches originales en économie, droit, management et
