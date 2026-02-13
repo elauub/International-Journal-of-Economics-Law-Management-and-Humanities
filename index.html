@@ -29,23 +29,39 @@
         .grid-domaines { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
         .domaine { background: #f1f5f9; padding: 15px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 0.85rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
         
-        /* Sidebar Styles */
         .annonce { text-align: center; border: 2px solid var(--primary); padding: 15px; border-radius: 10px; }
         .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; }
         .deadline { background: var(--accent); color: white; padding: 12px; display: block; font-weight: bold; border-radius: 5px; text-transform: uppercase; }
 
-        /* Formulaire */
         .fee-tag { background: #ebf8ff; color: var(--primary); padding: 12px; border-radius: 6px; font-weight: bold; text-align: center; margin-bottom: 15px; border: 1px dashed var(--primary); }
         input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; }
         .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
 
-        /* SECTION INDEXATION BAS DE PAGE */
-        .indexation-footer { background: white; padding: 30px 5%; border-top: 1px solid #eee; }
-        .indexation-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 30px; }
+        /* SECTION INDEXATION CORRIGÉE */
+        .indexation-footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; margin-top: 20px; }
+        .indexation-container { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; }
         .indexation-text { flex: 1; min-width: 300px; }
-        .indexation-logos { flex: 1; min-width: 300px; display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 15px; align-items: center; justify-items: center; }
-        .index-logo { max-width: 100px; height: auto; filter: grayscale(20%); transition: 0.3s; }
-        .index-logo:hover { filter: grayscale(0%); transform: scale(1.05); }
+        
+        .indexation-logos { 
+            flex: 1; 
+            min-width: 300px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 25px; 
+            justify-content: center; 
+            align-items: center;
+        }
+        
+        .index-logo { 
+            height: 45px; /* Hauteur fixe pour l'alignement */
+            width: auto;
+            max-width: 140px;
+            filter: grayscale(100%); 
+            opacity: 0.7;
+            transition: 0.4s; 
+            display: block;
+        }
+        .index-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
         footer { text-align: center; padding: 2rem; background: #1a365d; color: white; }
     </style>
@@ -116,15 +132,14 @@
     <div class="indexation-container">
         <div class="indexation-text">
             <h3 style="margin-top:0;">Indexation & Visibilité</h3>
-            <p style="font-size: 0.9rem; color: #555;">L'<strong>International-Journal of Economics Law Management and Humanities</strong> s'engage à assurer la plus large diffusion possible des travaux publiés. La revue est indexée et référencée par les bases de données suivantes :</p>
+            <p style="font-size: 0.9rem; color: #555;">La revue est indexée et référencée par les bases de données internationales suivantes :</p>
         </div>
         <div class="indexation-logos">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Google_Scholar_logo.svg/512px-Google_Scholar_logo.svg.png" class="index-logo" alt="Google Scholar">
-            <img src="https://www.crossref.org/wp-content/uploads/2023/05/crossref-logo-landscape-200.png" class="index-logo" alt="CrossRef">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/ORCID_logo.svg/1200px-ORCID_logo.svg.png" class="index-logo" alt="ORCID">
-            <img src="https://road.issn.org/sites/all/themes/issn_theme/logo.png" class="index-logo" alt="ROAD">
-            <img src="https://www.doi.org/img/doi_logo.png" class="index-logo" alt="DOI">
-            <img src="https://s3.amazonaws.com/clarivate-libguides-prod/6909623/InCites_Banner.png?v=1543338308" class="index-logo" alt="Clarivate">
+            <img src="https://static.crossref.org/branding/logo/crossref-logo-landscape-200.png" class="index-logo" alt="CrossRef">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/ORCID_logo.svg/1024px-ORCID_logo.svg.png" class="index-logo" alt="ORCID">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ISSN_logo.svg/512px-ISSN_logo.svg.png" class="index-logo" alt="ISSN">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Doi_logo.svg/1024px-Doi_logo.svg.png" class="index-logo" alt="DOI">
         </div>
     </div>
 </section>
