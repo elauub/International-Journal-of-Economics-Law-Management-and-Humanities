@@ -30,9 +30,9 @@
         input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #cbd5e0; border-radius: 5px; box-sizing: border-box; }
         .btn { background: var(--accent); color: white; border: none; padding: 16px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
         .indexation-footer { background: #fff; padding: 40px 5%; border-top: 1px solid #eee; margin-top: 20px; }
-        .indexation-container { max-width: 1200px; margin: 0 auto; }
-        .indexation-logos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: center; }
-        .index-logo { height: 40px; max-width: 150px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
+        .indexation-container { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .indexation-logos { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: center; margin-top: 20px; }
+        .index-logo { height: 45px; max-width: 140px; object-fit: contain; filter: grayscale(100%); opacity: 0.7; transition: 0.3s; }
         .index-logo:hover { filter: grayscale(0%); opacity: 1; }
         footer { text-align: center; padding: 2rem; background: #1a365d; color: white; }
     </style>
@@ -77,3 +77,48 @@
     <aside>
         <div class="card annonce">
             <h4>Appel à Publication</h4>
+            <img src="page%20de%20garde%20num%201.png" alt="Appel à publication Mars 2026">
+            <span class="deadline">LIMITE : 27 FÉVRIER 2026</span>
+        </div>
+
+        <div id="soumission" class="card">
+            <h3>Soumission</h3>
+            <a href="consignes.html" class="consignes-link">📖 Lire les Consignes de Recherche</a>
+            <a href="Template.docx" style="text-decoration:none; color:var(--primary); font-size:0.8rem; display:block; text-align:center; margin-bottom:15px;" download>📥 Télécharger le Template</a>
+            
+            <div class="fee-tag">Frais : 70 EUROS</div>
+            
+            <form action="https://formspree.io/f/mvzbkjrr" method="POST" enctype="multipart/form-data">
+                <input type="text" name="nom" placeholder="Nom Complet" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="langue" required>
+                    <option value="">Langue / Language</option>
+                    <option value="Français">Français</option>
+                    <option value="Anglais">Anglais</option>
+                </select>
+                <input type="file" name="manuscrit" accept=".pdf,.doc,.docx" required>
+                <button type="submit" class="btn">Soumettre l'article</button>
+            </form>
+        </div>
+    </aside>
+</div>
+
+<section class="indexation-footer">
+    <div class="indexation-container">
+        <h3 style="color: #718096; font-size: 1rem; border: none;">Indexation & Visibilité</h3>
+        <div class="indexation-logos">
+            <img src="google%20scholar.png" class="index-logo" alt="Google Scholar">
+            <img src="crossref.png" class="index-logo" alt="CrossRef">
+            <img src="ORCID.png" class="index-logo" alt="ORCID">
+            <img src="DOI.png" class="index-logo" alt="DOI">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p><strong>International-Journal of Economics Law Management and Humanities</strong></p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Tous droits réservés. | revue.ijelmh@gmail.com</p>
+</footer>
+
+</body>
+</html>
