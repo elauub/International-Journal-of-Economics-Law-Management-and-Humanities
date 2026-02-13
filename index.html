@@ -1,199 +1,35 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International-Journal of Economics Law Management and Humanities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a365d; /* Bleu académique */
-            --secondary: #2d3748;
-            --accent: #c53030; /* Rouge bordeaux pour le sérieux et l'action */
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-        }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            line-height: 1.6; 
-            color: var(--secondary); 
-            margin: 0; 
-            background-color: var(--bg);
-        }
-
-        h1, h2, h3 { font-family: 'Lora', serif; }
-
-        header { 
-            background: var(--primary); 
-            color: white; 
-            padding: 1.5rem 5%; 
-            display: flex; 
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        header h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
-
-        nav { margin-top: 1rem; }
-        nav a { color: #e2e8f0; margin: 0 15px; text-decoration: none; font-weight: 500; font-size: 0.9rem; }
-        nav a:hover { color: white; text-decoration: underline; }
-
-        .hero { 
-            background: white; 
-            padding: 3rem 5%; 
-            text-align: center; 
-            border-bottom: 1px solid #e2e8f0; 
-        }
-
-        .container { 
-            display: grid; 
-            grid-template-columns: 2fr 1fr; 
-            gap: 40px; 
-            max-width: 1200px; 
-            margin: 2rem auto; 
-            padding: 0 5%; 
-        }
-
-        /* Liste des articles */
-        .article-card { 
-            background: var(--card-bg);
-            padding: 2rem; 
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            margin-bottom: 1.5rem;
-        }
-        .article-card h2 { color: var(--primary); margin-top: 0; }
-        .meta { font-size: 0.85rem; color: #718096; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-        .badge { background: #edf2f7; color: #2b6cb0; padding: 4px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; }
-
-        /* Formulaire de soumission */
-        .submission-box { 
-            background: #ffffff; 
-            padding: 1.5rem; 
-            border-radius: 8px; 
-            border: 2px solid var(--primary);
-            position: sticky;
-            top: 20px;
-        }
-        .submission-box h3 { margin-top: 0; color: var(--primary); border-bottom: 2px solid #edf2f7; padding-bottom: 10px; }
-        
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-size: 0.85rem; font-weight: bold; margin-bottom: 5px; }
-        input, textarea { 
-            width: 100%; 
-            padding: 10px; 
-            border: 1px solid #cbd5e0; 
-            border-radius: 4px; 
-            box-sizing: border-box; 
-            font-family: inherit;
-        }
-        input[type="file"] { border: none; padding: 0; }
-        
-        .btn-submit { 
-            background: var(--accent); 
-            color: white; 
-            padding: 12px; 
-            width: 100%; 
-            border: none; 
-            border-radius: 4px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        .btn-submit:hover { background: #a52828; }
-
-        footer { text-align: center; padding: 3rem; color: #718096; font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            .container { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>International-Journal of Economics Law Management and Humanities</h1>
-    <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Archives</a>
-        <a href="#">Comité Éditorial</a>
-        <a href="#soumission">Soumettre un article</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <p style="color: var(--accent); font-weight: bold; text-transform: uppercase;">Appel à communications — 2026</p>
-    <h2 style="font-size: 2rem;">Promouvoir l'excellence dans la recherche pluridisciplinaire</h2>
-    <p style="max-width: 800px; margin: 0 auto; color: #4a5568;">Une revue à comité de lecture dédiée aux avancées en économie, droit, gestion et sciences humaines à travers le monde.</p>
+<section id="comite" class="card">
+    <h2>Comité Éditorial</h2>
+    <p style="font-size: 0.9rem; color: #718096; margin-bottom: 1.5rem;">
+        Notre comité est composé d'experts internationaux garantissant la rigueur scientifique de chaque publication.
+    </p>
+    
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+            <thead>
+                <tr style="background: #edf2f7; color: var(--primary);">
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Nom & Prénom</th>
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Institution / Université</th>
+                    <th style="padding: 12px; border-bottom: 2px solid #cbd5e0;">Spécialité</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Éditeur en Chef]</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Université de [Ville], [Pays]</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Économie & Management</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Expert]</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">École de Droit de [Ville]</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Droit International</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7; font-weight: bold;">[Nom de l'Expert]</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Faculté des Sciences Humaines</td>
+                    <td style="padding: 12px; border-bottom: 1px solid #edf2f7;">Sociologie & Éthique</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
-
-<div class="container">
-    <main>
-        <h3>Dernières Publications</h3>
-        
-        <article class="article-card">
-            <div class="meta">Volume 1, Numéro 1 • Janvier 2026</div>
-            <span class="badge">Économie de la Santé</span>
-            <h2>Impact de la transformation numérique sur la gestion hospitalière en Afrique de l'Ouest</h2>
-            <p>Par Dr. Amadou Diallo. Cet article examine comment les outils digitaux ont restructuré les processus de décision...</p>
-            <a href="#" style="color: var(--primary); font-weight: bold;">Lire le résumé complet →</a>
-        </article>
-
-        <article class="article-card">
-            <div class="meta">Volume 1, Numéro 1 • Janvier 2026</div>
-            <span class="badge">Droit International</span>
-            <h2>Les nouveaux enjeux juridiques de la protection des données personnelles</h2>
-            <p>Par Me. Claire Valmont. Une analyse comparative des régulations entre l'Union Européenne et les pays du Maghreb...</p>
-            <a href="#" style="color: var(--primary); font-weight: bold;">Lire le résumé complet →</a>
-        </article>
-    </main>
-
-    <aside id="soumission">
-        <div class="submission-box">
-            <h3>Soumission PDF</h3>
-            <p style="font-size: 0.8rem; color: #718096;">Veuillez remplir le formulaire ci-dessous pour soumettre votre manuscrit (Format PDF uniquement).</p>
-            
-            <form action="https://formspree.io/f/xwvnlzpl" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label>Auteur Principal</label>
-                    <input type="text" name="name" placeholder="Ex: Jean Dupont" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>Email Professionnel</label>
-                    <input type="email" name="_replyto" placeholder="jean.d@universite.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Titre de l'article</label>
-                    <input type="text" name="article_title" placeholder="Titre complet" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Résumé (Abstract)</label>
-                    <textarea name="abstract" rows="4" placeholder="Breve présentation de votre recherche..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>Fichier du manuscrit (PDF)</label>
-                    <input type="file" name="manuscript_file" accept=".pdf" required>
-                </div>
-
-                <input type="hidden" name="_subject" value="Nouvelle soumission : IJELMH">
-                
-                <button type="submit" class="btn-submit">Envoyer pour relecture</button>
-            </form>
-        </div>
-    </aside>
-</div>
-
-<footer>
-    <p>&copy; 2026 International-Journal of Economics Law Management and Humanities. <br> Tous droits réservés. ISSN en cours de validation.</p>
-</footer>
-
-</body>
-</html>
