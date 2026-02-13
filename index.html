@@ -3,49 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | Revue Scientifique Internationale Mensuelle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>IJELMH | Revue Scientifique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1a365d; --secondary: #2d3748; --accent: #c53030; --info: #3182ce; --bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--secondary); margin: 0; background-color: var(--bg); }
-        h1, h2, h3, h4 { font-family: 'Lora', serif; color: var(--primary); }
+        :root { --primary: #1a365d; --accent: #c53030; --bg: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #2d3748; }
         header { background: var(--primary); color: white; padding: 1.5rem 5%; border-bottom: 4px solid var(--accent); }
-        .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-        .brand { display: flex; align-items: center; gap: 20px; }
-        .logo-img { height: 85px; width: auto; background: white; padding: 5px; border-radius: 5px; }
-        .brand-text h1 { margin: 0; color: white; font-size: 1.5rem; line-height: 1.2; border-left: 2px solid rgba(255,255,255,0.3); padding-left: 15px; }
-        nav { display: flex; gap: 10px; }
-        nav a { color: white; text-decoration: none; font-size: 0.85rem; padding: 8px 15px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; transition: 0.3s; }
-        nav a:hover { background: var(--accent); border-color: var(--accent); }
-        .container { display: flex; flex-direction: column; max-width: 1200px; margin: 2rem auto; padding: 0 5%; gap: 30px; }
-        @media (min-width: 950px) { .container { flex-direction: row; } main { flex: 2; } aside { flex: 1; } }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
-        .announcement-box { text-align: center; border: 2px solid var(--primary); padding: 10px; border-radius: 8px; margin-bottom: 20px; background: white; }
-        .announcement-box img { max-width: 100%; height: auto; border-radius: 4px; }
-        .deadline-tag { background: var(--accent); color: white; padding: 5px 10px; display: inline-block; margin-top: 10px; font-weight: bold; border-radius: 4px; }
-        .fee-info { background: #ebf8ff; border: 1px solid var(--info); padding: 1rem; border-radius: 8px; margin-bottom: 20px; text-align: center; }
-        input, select, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #cbd5e0; border-radius: 4px; box-sizing: border-box; }
-        .btn-submit { background: var(--accent); color: white; border: none; padding: 14px; width: 100%; border-radius: 4px; font-weight: bold; cursor: pointer; }
-        footer { background: #edf2f7; text-align: center; padding: 3rem; color: var(--primary); border-top: 1px solid #e2e8f0; margin-top: 4rem; }
+        .header-content { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 20px; }
+        .logo-header { height: 70px; background: white; padding: 5px; border-radius: 5px; }
+        
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media (max-width: 850px) { .container { grid-template-columns: 1fr; } }
+        
+        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .grid-domaines { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 20px 0; }
+        .domaine { background: #edf2f7; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 0.9rem; color: var(--primary); border-bottom: 3px solid var(--accent); }
+        
+        .annonce { text-align: center; border: 2px solid var(--primary); padding: 10px; border-radius: 10px; }
+        .annonce img { width: 100%; height: auto; border-radius: 5px; margin-bottom: 10px; }
+        .deadline { background: var(--accent); color: white; padding: 10px; display: block; font-weight: bold; border-radius: 5px; }
+
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .btn { background: var(--accent); color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        footer { text-align: center; padding: 2rem; background: #eee; margin-top: 30px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-container">
-        <div class="brand">
-            <img src="logo.png" alt="Logo IJELMH" class="logo-img">
-            <div class="brand-text">
-                <h1>International-Journal of Economics Law<br>Management and Humanities</h1>
-            </div>
+    <div class="header-content">
+        <img src="logo.png" alt="Logo IJELMH" class="logo-header">
+        <div>
+            <h1 style="margin:0; font-size: 1.4rem;">International-Journal of Economics Law Management and Humanities</h1>
+            <p style="margin:5px 0 0 0; opacity: 0.9;">Revue Scientifique Mensuelle | Français - English</p>
         </div>
-        <nav><a href="#articles">Publications</a><a href="#about">À Propos</a><a href="#soumission">Soumettre</a></nav>
     </div>
 </header>
 
 <div class="container">
     <main>
-        <section id="about" class="card">
+        <section class="card">
             <h2>Champs de Recherche & Langues</h2>
-            <p>L'<strong>IJELMH</strong> est une revue multidisciplinaire qui publie chaque mois des travaux de
+            <p>L’<strong>IJELMH</strong> est une revue multidisciplinaire internationale qui publie chaque mois des travaux de haute qualité en <strong>Français</strong> et en <strong>Anglais</strong> dans les domaines suivants :</p>
+            
+            <div class="grid-domaines">
+                <div class="domaine">Économie & Gestion</div>
+                <div class="domaine">Droit</div>
+                <div class="domaine">Sciences Humaines</div>
+            </div>
+
+            <p style="font-style: italic; color: #4a5568; border-left: 4px solid var(--primary); padding-left: 15px; margin-top: 20px;">
+                The journal accepts original research papers in English and French covering Economics, Management, Law, and Social Sciences.
+            </p>
+        </section>
+
+        <section class="card">
+            <h3>Dernières Publications</h3>
+            <p style="text-align: center; color: #718096; padding: 20px;">
+                <strong>Volume 1, Numéro 1 (Mars 2026)</strong><br>
+                Le premier numéro est en cours de constitution.
+            </p>
+        </section>
+    </main>
+
+    <aside>
+        <div class="card annonce">
+            <h4 style="margin-top:0; color: var(--primary);">📢 APPEL À PUBLICATION</h4>
+            <img src="page de garde num 1" alt="Appel Mars 2026">
+            <span class="deadline">Limite : 27 Février 2026</span>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-top:0;">Soumettre un Article</h3>
+            <p style="background: #fff5f5; padding: 10px; border-radius: 5px; font-weight: bold; text-align: center;">Frais : 70 EUROS</p>
+            <form action="https://formspree.io/f/revue.ijelmh@gmail.com" method="POST" enctype="multipart/form-data">
+                <input type="text" name="nom" placeholder="Nom Complet / Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <select name="langue" required>
+                    <option value="">Langue / Language</option>
+                    <option value="Français">Français</option>
+                    <option value="Anglais">Anglais</option>
+                </select>
+                <label style="font-size: 0.8rem; font-weight: bold;">Manuscrit (PDF) :</label>
+                <input type="file" name="fichier" accept=".pdf" required>
+                <button type="submit" class="btn">Envoyer l'article</button>
+            </form>
+        </div>
+    </aside>
+</div>
+
+<footer>
+    <p>📧 revue.ijelmh@gmail.com | 📞 WhatsApp : +212 6 63 17 93 41</p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 IJELMH Journal. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
