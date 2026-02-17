@@ -5,26 +5,29 @@
     <title>IJELMH | Accueil</title>
     <style>
         :root { --navy: #002147; --gold: #c5a059; --bg: #f4f4f4; }
-        body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; color: #333; }
-        .header { text-align: center; padding: 30px; border-bottom: 5px solid var(--gold); }
-        .header h1 { color: var(--navy); margin: 0; text-transform: uppercase; font-size: 2rem; }
-        nav { background: var(--navy); position: sticky; top: 0; z-index: 1000; text-align: center; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; line-height: 1.6; color: #333; }
+        .header { text-align: center; padding: 40px 20px; border-bottom: 5px solid var(--gold); background: white; }
+        .header h1 { color: var(--navy); margin: 0; text-transform: uppercase; font-size: 1.8rem; }
+        nav { background: var(--navy); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
         nav a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; }
         nav a:hover { background: var(--gold); }
-        .container { display: grid; grid-template-columns: 250px 1fr 250px; gap: 20px; padding: 20px 5%; max-width: 1400px; margin: 0 auto; }
+        .container { display: grid; grid-template-columns: 250px 1fr 250px; gap: 25px; padding: 25px 5%; max-width: 1400px; margin: 0 auto; }
         .sidebar-box { border: 1px solid #ddd; margin-bottom: 20px; border-radius: 4px; overflow: hidden; background: var(--bg); }
-        .sidebar-title { background: var(--navy); color: white; padding: 10px; font-weight: bold; border-left: 5px solid var(--gold); }
+        .sidebar-title { background: var(--navy); color: white; padding: 10px; font-weight: bold; border-left: 5px solid var(--gold); font-size: 0.9rem; }
         .sidebar-content ul { list-style: none; padding: 0; margin: 0; }
-        .sidebar-content li a { display: block; padding: 10px; color: #333; text-decoration: none; border-bottom: 1px solid #ddd; font-size: 0.85rem; }
-        .window-card { border: 1px solid #eee; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .window-card h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
-        .btn-submit { background: var(--gold); color: white; padding: 12px 20px; text-decoration: none; display: inline-block; font-weight: bold; border-radius: 3px; }
-        footer { background: var(--navy); color: white; text-align: center; padding: 30px; margin-top: 40px; }
+        .sidebar-content li a { display: block; padding: 10px 15px; color: #333; text-decoration: none; border-bottom: 1px solid #ddd; font-size: 0.8rem; }
+        .sidebar-content li a:hover { background: white; color: var(--gold); }
+        .window-card { border: 1px solid #eee; padding: 25px; margin-bottom: 20px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .window-card h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 0; }
+        .btn-submit { background: var(--gold); color: white; padding: 12px 25px; text-decoration: none; display: inline-block; font-weight: bold; border-radius: 3px; transition: 0.3s; }
+        .btn-submit:hover { background: var(--navy); }
+        footer { background: var(--navy); color: white; text-align: center; padding: 40px; margin-top: 40px; border-top: 5px solid var(--gold); }
+        @media (max-width: 1000px) { .container { grid-template-columns: 1fr; } .sidebar-box { display: none; } }
     </style>
 </head>
 <body>
-    <header class="header"><h1>International Journal of Economics, Law, Management & Humanities</h1></header>
+    <header class="header"><h1>International Journal of Economics, Law, Management & Humanities</h1><p>Revue Internationale Pluridisciplinaire</p></header>
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
@@ -38,19 +41,20 @@
         </ul>
     </nav>
     <div class="container">
-        <aside><div class="sidebar-box"><div class="sidebar-title">Menu</div><div class="sidebar-content"><ul><li><a href="a-propos.html">Objectifs</a></li><li><a href="soumission.html">Frais (70€)</a></li><li><a href="Template.docx">Modèle Word</a></li></ul></div></div></aside>
+        <aside><div class="sidebar-box"><div class="sidebar-title">Menu Rapide</div><div class="sidebar-content"><ul><li><a href="a-propos.html">Objectifs de la revue</a></li><li><a href="soumission.html">Frais de Publication</a></li><li><a href="Template.docx">Télécharger le Modèle</a></li></ul></div></div></aside>
         <main>
-            <div class="window-card" style="background:#fffbe6; text-align:center;">
-                <h2>Appel à contributions 2026</h2>
-                <p>Volume 1, Numéro 1 est ouvert aux soumissions.</p>
-                <a href="soumission.html" class="btn-submit">SOUMETTRE MAINTENANT</a>
+            <div class="window-card" style="background:#fffbe6; text-align:center; border: 1px solid #ffe58f;">
+                <h2 style="color: #856404; border-color: #ffe58f;">Appel à Publication 2026</h2>
+                <p>Le Volume 1, Numéro 1 est actuellement ouvert aux soumissions de manuscrits originaux.</p>
+                <a href="soumission.html" class="btn-submit">SOUMETTRE MON ARTICLE</a>
             </div>
             <div class="window-card">
-                <h2>Bienvenue</h2>
-                <p>L'IJELMH est une revue internationale multidisciplinaire en libre accès. Nous publions des recherches originales évaluées par les pairs.</p>
+                <h2>Bienvenue sur IJELMH</h2>
+                <p>L'IJELMH est une revue académique internationale, bimensuelle et en libre accès. Nous publions des travaux de recherche originaux dans les domaines du droit, de la gestion et de l'économie.</p>
+                <p>Tous les articles sont soumis à une évaluation rigoureuse par les pairs (Double-Blind Peer Review).</p>
             </div>
         </main>
-        <aside><div class="sidebar-box"><div class="sidebar-title">Indexation</div><div class="sidebar-content" style="text-align:center; padding:10px;"><img src="google%20scholar.png" width="120"><br><img src="crossref.png" width="120"></div></div></aside>
+        <aside><div class="sidebar-box"><div class="sidebar-title">Indexation</div><div class="sidebar-content" style="text-align:center; padding:15px;"><img src="google%20scholar.png" width="130" style="margin-bottom:10px;"><br><img src="crossref.png" width="130"></div></div></aside>
     </div>
     <footer>&copy; 2026 IJELMH Journal - revue.ijelmh@gmail.com</footer>
 </body>
