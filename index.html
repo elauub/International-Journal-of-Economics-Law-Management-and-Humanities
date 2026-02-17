@@ -6,119 +6,130 @@
     <title>IJELMH | International Journal of Economics, Law, Management & Humanities</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #002147; --gold: #c5a059; --light-bg: #f4f4f4; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; background: #fff; color: #333; line-height: 1.6; }
-        
-        /* Top Bar */
-        .top-bar { background: var(--navy); color: white; padding: 10px 5%; font-size: 0.8rem; display: flex; justify-content: space-between; }
-        
-        /* Header & Banner */
-        header { background: white; padding: 20px 5%; border-bottom: 5px solid var(--gold); text-align: center; }
-        header h1 { margin: 0; font-size: 2.2rem; color: var(--navy); text-transform: uppercase; }
-        
-        /* Navigation */
+        :root { --navy: #002147; --gold: #c5a059; --bg-gray: #f8f9fa; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
+
+        /* Header / Banner */
+        .banner { background: white; padding: 25px 5%; text-align: center; border-bottom: 4px solid var(--gold); }
+        .banner h1 { margin: 0; color: var(--navy); font-size: 2rem; text-transform: uppercase; }
+        .banner p { margin: 5px 0; font-style: italic; color: #666; }
+
+        /* Navigation Bar - CLONÉE */
         nav { background: var(--navy); position: sticky; top: 0; z-index: 1000; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav li a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
-        nav li a:hover { background: var(--gold); }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+        nav li { position: relative; }
+        nav a { display: block; padding: 15px 18px; color: white; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { background: var(--gold); }
+        
+        /* Layout Structure */
+        .container { display: grid; grid-template-columns: 260px 1fr 260px; gap: 20px; padding: 20px 4%; max-width: 1500px; margin: 0 auto; }
 
-        .container { display: grid; grid-template-columns: 250px 1fr 250px; gap: 20px; padding: 20px 5%; max-width: 1400px; margin: 0 auto; }
-        
-        /* Sidebars */
-        .sidebar { background: var(--light-bg); padding: 15px; border-radius: 5px; font-size: 0.9rem; }
-        .sidebar h3 { background: var(--navy); color: white; padding: 10px; margin-top: 0; font-size: 1rem; border-left: 5px solid var(--gold); }
-        .sidebar-menu { list-style: none; padding: 0; }
-        .sidebar-menu li { border-bottom: 1px solid #ddd; padding: 8px 0; }
-        .sidebar-menu li a { text-decoration: none; color: var(--navy); }
+        /* Sidebars (Fenêtres latérales) */
+        .sidebar-box { border: 1px solid #ddd; margin-bottom: 20px; border-radius: 3px; }
+        .sidebar-title { background: var(--navy); color: white; padding: 10px; font-size: 0.9rem; border-left: 4px solid var(--gold); font-weight: bold; }
+        .sidebar-content { padding: 10px; background: var(--bg-gray); }
+        .sidebar-content ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-content li { border-bottom: 1px solid #eee; padding: 8px 0; }
+        .sidebar-content a { text-decoration: none; color: #444; font-size: 0.85rem; }
+        .sidebar-content a:hover { color: var(--gold); }
 
-        /* Main Content */
-        .main-content { background: white; padding: 0 10px; }
-        .card { border: 1px solid #eee; margin-bottom: 20px; padding: 20px; }
-        .card h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 10px; }
+        /* Main Content Area */
+        .main-window { border: 1px solid #eee; padding: 20px; background: white; }
+        .main-window h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 0; }
         
-        .announcement { background: #fff8e1; border: 1px solid #ffe082; padding: 15px; margin-bottom: 20px; }
+        .announcement-bar { background: #fff8e1; border: 1px solid #ffe082; padding: 15px; margin-bottom: 20px; text-align: center; }
+        .btn-action { background: var(--gold); color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 2px; display: inline-block; }
+
+        footer { background: var(--navy); color: white; text-align: center; padding: 40px; margin-top: 40px; }
         
-        footer { background: var(--navy); color: white; text-align: center; padding: 30px; margin-top: 50px; }
-        .btn-gold { background: var(--gold); color: white; padding: 10px 20px; text-decoration: none; border-radius: 3px; display: inline-block; margin-top: 10px; }
+        @media (max-width: 1100px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-<div class="top-bar">
-    <span>ISSN : En cours d'attribution</span>
-    <span>Email : revue.ijelmh@gmail.com</span>
-</div>
-
-<header>
+<header class="banner">
     <h1>International Journal of Economics, Law, Management & Humanities</h1>
-    <p>Une revue multidisciplinaire à comité de lecture (Peer-Reviewed)</p>
+    <p>A Peer-Reviewed Multi-Disciplinary International Journal</p>
 </header>
 
 <nav>
     <ul>
-        <li><a href="index.html">ACCUEIL</a></li>
-        <li><a href="comite.html">COMITÉ ÉDITORIAL</a></li>
-        <li><a href="consignes.html">CONSIGNES</a></li>
-        <li><a href="#">ARCHIVES</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À Propos</a></li>
+        <li><a href="editorial-board.html">Comité Éditorial</a></li>
+        <li><a href="information.html">Informations</a></li>
+        <li><a href="indexing.html">Indexation</a></li>
+        <li><a href="issues.html">Numéros (Issues)</a></li>
+        <li><a href="submission.html">Soumission</a></li>
+        <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
 <div class="container">
-    <aside class="sidebar">
-        <h3>MENU PRINCIPAL</h3>
-        <ul class="sidebar-menu">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#">Politique de la Revue</a></li>
-            <li><a href="#">Processus d'Évaluation</a></li>
-            <li><a href="consignes.html">Consignes aux Auteurs</a></li>
-            <li><a href="Template.docx">Télécharger le Modèle</a></li>
-        </ul>
-        
-        <h3 style="margin-top:20px;">INDEXATION</h3>
-        <div style="text-align: center;">
-            <img src="google_scholar.png" width="150" alt="Scholar">
-            <img src="crossref.png" width="150" alt="CrossRef">
+    
+    <aside>
+        <div class="sidebar-box">
+            <div class="sidebar-title">NAVIGATION RAPIDE</div>
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="about.html">Objectifs et Portée</a></li>
+                    <li><a href="editorial-policy.html">Politique Éditoriale</a></li>
+                    <li><a href="peer-review.html">Processus d'Évaluation</a></li>
+                    <li><a href="consignes.html">Guide des Auteurs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <div class="sidebar-title">TÉLÉCHARGEMENTS</div>
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="Template.docx" download>Modèle de Manuscrit</a></li>
+                    <li><a href="#">Formulaire de Copyright</a></li>
+                </ul>
+            </div>
         </div>
     </aside>
 
-    <main class="main-content">
-        <div class="announcement">
-            <strong>Appel à contributions :</strong> La revue accepte actuellement les articles pour le Volume 1, Numéro 1 (Mars 2026).
-            <br><a href="https://forms.gle/r5hc5AAqNPgQujVX7" class="btn-gold">Soumettre votre manuscrit</a>
+    <main class="main-window">
+        <div class="announcement-bar">
+            <strong>Appel à Contributions :</strong> Volume 1, Numéro 1 (2026) est ouvert.
+            <br><br>
+            <a href="https://forms.gle/r5hc5AAqNPgQujVX7" class="btn-action">SOUMETTRE MON ARTICLE</a>
         </div>
 
-        <div class="card">
-            <h2>À Propos de la Revue</h2>
-            <p>L'<strong>International Journal of Economics, Law, Management & Humanities (IJELMH)</strong> est une revue académique internationale en libre accès, bimensuelle et évaluée par des pairs. Elle explore les liens entre le droit, la gestion, l'économie et les humanités.</p>
-            <p>L'IJELMH s'engage à fournir une plateforme mondiale pour les chercheurs, les universitaires et les praticiens afin de partager des recherches de haute qualité et de promouvoir le dialogue intellectuel.</p>
-        </div>
-
-        <div class="card">
-            <h2>Pourquoi publier avec nous ?</h2>
-            <ul>
-                <li>Publication rapide et rigoureuse.</li>
-                <li>Indexation dans les bases de données internationales.</li>
-                <li>Certificat de publication gratuit pour chaque auteur.</li>
-                <li>Libre accès (Open Access) pour une visibilité maximale.</li>
-            </ul>
-        </div>
+        <h2>Bienvenue sur IJELMH</h2>
+        <p>L'<strong>International Journal of Economics, Law, Management & Humanities (IJELMH)</strong> est une revue internationale, bimensuelle, évaluée par les pairs et en libre accès.</p>
+        <p>Notre revue offre une plateforme prestigieuse pour la publication de recherches originales qui croisent les domaines du droit, de la gestion et de l'économie avec les sciences humaines.</p>
+        
+        <h3>Dernières Nouvelles</h3>
+        <p>Nous acceptons actuellement des soumissions pour notre premier numéro. Tous les articles subissent un test de plagiat rigoureux avant l'évaluation par les pairs.</p>
     </main>
 
-    <aside class="sidebar">
-        <h3>SÉCURITÉ & QUALITÉ</h3>
-        <p><strong>Plagiat :</strong> Tous les articles sont soumis à un logiciel de détection de plagiat rigoureux.</p>
-        <hr>
-        <h3>SOUMISSION RAPIDE</h3>
-        <p>Prêt à soumettre ?</p>
-        <a href="https://forms.gle/r5hc5AAqNPgQujVX7" target="_blank" class="btn-gold" style="width: 80%; text-align: center;">CLIQUEZ ICI</a>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Frais de traitement : 70€ / 750 MAD</p>
+    <aside>
+        <div class="sidebar-box">
+            <div class="sidebar-title">DÉTAILS TECHNIQUES</div>
+            <div class="sidebar-content" style="font-size: 0.8rem;">
+                <p><strong>ISSN (Online):</strong> En cours</p>
+                <p><strong>Fréquence:</strong> 6 Numéros / An</p>
+                <p><strong>Nature:</strong> International</p>
+                <p><strong>Langues:</strong> FR / EN</p>
+            </div>
+        </div>
+        <div class="sidebar-box">
+            <div class="sidebar-title">INDEXATION</div>
+            <div class="sidebar-content" style="text-align: center;">
+                <img src="google_scholar.png" width="130" style="margin-bottom: 10px;">
+                <img src="crossref.png" width="130" style="margin-bottom: 10px;">
+                <img src="DOI.png" width="80">
+            </div>
+        </div>
     </aside>
+
 </div>
 
 <footer>
-    <p>&copy; 2026 IJELMH | International Journal of Economics, Law, Management & Humanities</p>
-    <p>Propulsé par le Comité Éditorial IJELMH</p>
+    <p>&copy; 2026 IJELMH Journal | International Journal of Economics, Law, Management & Humanities</p>
+    <p>Email: revue.ijelmh@gmail.com</p>
 </footer>
 
 </body>
