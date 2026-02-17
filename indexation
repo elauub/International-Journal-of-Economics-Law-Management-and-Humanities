@@ -1,1 +1,10 @@
-
+<div class="main-window">
+    <h2>Indexation et Bases de Données</h2>
+    <p>IJELMH est fier d'être indexé et reconnu par les organismes suivants :</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 30px; text-align: center; margin-top: 30px;">
+        <div><img src="google_scholar.png" width="150"><br>Google Scholar</div>
+        <div><img src="crossref.png" width="150"><br>CrossRef</div>
+        <div><img src="ORCID.png" width="150"><br>ORCID</div>
+        <div><img src="DOI.png" width="100"><br>Digital Object Identifier</div>
+    </div>
+</div>
