@@ -6,43 +6,48 @@
     <title>IJELMH | International Journal of Economics, Law, Management & Humanities</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #002147; --gold: #c5a059; --bg-gray: #f8f9fa; }
-        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: white; color: #333; }
+        :root { --navy: #002147; --gold: #c5a059; --bg-gray: #f4f4f4; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: white; color: #333; line-height: 1.6; }
 
-        /* Header / Banner */
-        .banner { background: white; padding: 25px 5%; text-align: center; border-bottom: 4px solid var(--gold); }
-        .banner h1 { margin: 0; color: var(--navy); font-size: 2rem; text-transform: uppercase; }
-        .banner p { margin: 5px 0; font-style: italic; color: #666; }
+        /* Bannière Principale */
+        .banner { background: white; padding: 30px 5%; text-align: center; border-bottom: 5px solid var(--gold); }
+        .banner h1 { margin: 0; color: var(--navy); font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; }
+        .banner p { margin: 5px 0; font-style: italic; color: #555; font-size: 1.1rem; }
 
-        /* Navigation Bar - CLONÉE */
-        nav { background: var(--navy); position: sticky; top: 0; z-index: 1000; }
+        /* Barre de Navigation (Clonée) */
+        nav { background: var(--navy); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
         nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav li { position: relative; }
-        nav a { display: block; padding: 15px 18px; color: white; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { background: var(--gold); }
-        
-        /* Layout Structure */
-        .container { display: grid; grid-template-columns: 260px 1fr 260px; gap: 20px; padding: 20px 4%; max-width: 1500px; margin: 0 auto; }
+        nav li { border-right: 1px solid rgba(255,255,255,0.1); }
+        nav a { display: block; padding: 15px 20px; color: white; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { background: var(--gold); color: white; }
 
-        /* Sidebars (Fenêtres latérales) */
-        .sidebar-box { border: 1px solid #ddd; margin-bottom: 20px; border-radius: 3px; }
-        .sidebar-title { background: var(--navy); color: white; padding: 10px; font-size: 0.9rem; border-left: 4px solid var(--gold); font-weight: bold; }
-        .sidebar-content { padding: 10px; background: var(--bg-gray); }
+        /* Structure du contenu (3 Colonnes) */
+        .container { display: grid; grid-template-columns: 260px 1fr 260px; gap: 25px; padding: 25px 4%; max-width: 1500px; margin: 0 auto; }
+
+        /* Sidebars (Menus Latéraux) */
+        .sidebar-box { border: 1px solid #ddd; margin-bottom: 25px; border-radius: 4px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .sidebar-title { background: var(--navy); color: white; padding: 12px; font-size: 0.95rem; border-left: 5px solid var(--gold); font-weight: bold; text-transform: uppercase; }
+        .sidebar-content { padding: 0; background: var(--bg-gray); }
         .sidebar-content ul { list-style: none; padding: 0; margin: 0; }
-        .sidebar-content li { border-bottom: 1px solid #eee; padding: 8px 0; }
-        .sidebar-content a { text-decoration: none; color: #444; font-size: 0.85rem; }
-        .sidebar-content a:hover { color: var(--gold); }
+        .sidebar-content li { border-bottom: 1px solid #e0e0e0; }
+        .sidebar-content a { display: block; padding: 10px 15px; text-decoration: none; color: #333; font-size: 0.85rem; transition: 0.2s; }
+        .sidebar-content a:hover { background: #fff; color: var(--gold); padding-left: 20px; }
 
-        /* Main Content Area */
-        .main-window { border: 1px solid #eee; padding: 20px; background: white; }
-        .main-window h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 0; }
+        /* Fenêtre Centrale */
+        .main-window { background: white; }
+        .window-card { border: 1px solid #eee; padding: 25px; margin-bottom: 25px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); }
+        .window-card h2 { color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 12px; margin-top: 0; font-size: 1.5rem; }
         
-        .announcement-bar { background: #fff8e1; border: 1px solid #ffe082; padding: 15px; margin-bottom: 20px; text-align: center; }
-        .btn-action { background: var(--gold); color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 2px; display: inline-block; }
+        .announcement { background: #fffbe6; border: 1px solid #ffe58f; padding: 20px; margin-bottom: 25px; text-align: center; border-radius: 4px; }
+        .btn-submit { background: var(--gold); color: white; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 3px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-submit:hover { background: var(--navy); transform: translateY(-2px); }
 
-        footer { background: var(--navy); color: white; text-align: center; padding: 40px; margin-top: 40px; }
-        
-        @media (max-width: 1100px) { .container { grid-template-columns: 1fr; } }
+        /* Pied de page */
+        footer { background: var(--navy); color: white; text-align: center; padding: 50px 20px; margin-top: 50px; border-top: 5px solid var(--gold); }
+        .footer-links a { color: var(--gold); text-decoration: none; margin: 0 10px; }
+
+        /* Mobile */
+        @media (max-width: 1100px) { .container { grid-template-columns: 1fr; } .sidebar { display: none; } }
     </style>
 </head>
 <body>
@@ -55,72 +60,82 @@
 <nav>
     <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html">À Propos</a></li>
-        <li><a href="editorial-board.html">Comité Éditorial</a></li>
+        <li><a href="a%20propos.html">À Propos</a></li>
+        <li><a href="comite.html">Comité Éditorial</a></li>
         <li><a href="information.html">Informations</a></li>
-        <li><a href="indexing.html">Indexation</a></li>
-        <li><a href="issues.html">Numéros (Issues)</a></li>
-        <li><a href="submission.html">Soumission</a></li>
+        <li><a href="indexation.html">Indexation</a></li>
+        <li><a href="issue.html">Numéros (Issues)</a></li>
+        <li><a href="soumission.html">Soumission</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
 
 <div class="container">
     
-    <aside>
+    <aside class="sidebar">
         <div class="sidebar-box">
-            <div class="sidebar-title">NAVIGATION RAPIDE</div>
+            <div class="sidebar-title">Menu Rapide</div>
             <div class="sidebar-content">
                 <ul>
-                    <li><a href="about.html">Objectifs et Portée</a></li>
-                    <li><a href="editorial-policy.html">Politique Éditoriale</a></li>
-                    <li><a href="peer-review.html">Processus d'Évaluation</a></li>
+                    <li><a href="a%20propos.html">Objectifs et Portée</a></li>
+                    <li><a href="information.html">Processus d'Évaluation</a></li>
                     <li><a href="consignes.html">Guide des Auteurs</a></li>
+                    <li><a href="soumission.html">Frais de Publication</a></li>
                 </ul>
             </div>
         </div>
         <div class="sidebar-box">
-            <div class="sidebar-title">TÉLÉCHARGEMENTS</div>
+            <div class="sidebar-title">Modèles</div>
             <div class="sidebar-content">
                 <ul>
-                    <li><a href="Template.docx" download>Modèle de Manuscrit</a></li>
-                    <li><a href="#">Formulaire de Copyright</a></li>
+                    <li><a href="Template.docx" download>📥 Télécharger le Template</a></li>
+                    <li><a href="#">📝 Formulaire de Copyright</a></li>
                 </ul>
             </div>
         </div>
     </aside>
 
-    <main class="main-window">
-        <div class="announcement-bar">
-            <strong>Appel à Contributions :</strong> Volume 1, Numéro 1 (2026) est ouvert.
-            <br><br>
-            <a href="https://forms.gle/r5hc5AAqNPgQujVX7" class="btn-action">SOUMETTRE MON ARTICLE</a>
+    <main class="main-content">
+        <div class="announcement">
+            <h3 style="margin-top:0; color:#856404;">Appel à Publication (Volume 1, Issue 1)</h3>
+            <p>Nous invitons les chercheurs et académiciens à soumettre leurs manuscrits originaux pour notre prochain numéro.</p>
+            <a href="soumission.html" class="btn-submit">SOUMETTRE MON ARTICLE MAINTENANT</a>
         </div>
 
-        <h2>Bienvenue sur IJELMH</h2>
-        <p>L'<strong>International Journal of Economics, Law, Management & Humanities (IJELMH)</strong> est une revue internationale, bimensuelle, évaluée par les pairs et en libre accès.</p>
-        <p>Notre revue offre une plateforme prestigieuse pour la publication de recherches originales qui croisent les domaines du droit, de la gestion et de l'économie avec les sciences humaines.</p>
-        
-        <h3>Dernières Nouvelles</h3>
-        <p>Nous acceptons actuellement des soumissions pour notre premier numéro. Tous les articles subissent un test de plagiat rigoureux avant l'évaluation par les pairs.</p>
+        <div class="window-card">
+            <h2>Bienvenue sur IJELMH</h2>
+            <p>L'<strong>International Journal of Economics, Law, Management & Humanities (IJELMH)</strong> est une revue en ligne bimensuelle, à comité de lecture et en libre accès (Open Access). Elle se consacre à la publication de recherches de haute qualité dans les domaines interconnectés de l'économie, du droit, de la gestion et des humanités.</p>
+            <p>Notre plateforme permet aux auteurs de diffuser leurs travaux à une audience mondiale tout en bénéficiant d'un processus de révision rigoureux et constructif.</p>
+        </div>
+
+        <div class="window-card">
+            <h2>Processus de Publication</h2>
+            <p>Tous les articles soumis sont examinés selon un processus de <strong>Double-Blind Peer Review</strong> (évaluation par les pairs en double aveugle). Cela garantit l'impartialité et la qualité académique de chaque publication.</p>
+            <ul style="padding-left: 20px;">
+                <li>Vérification du plagiat (Turnitin/Quillbot).</li>
+                <li>Évaluation par deux experts indépendants.</li>
+                <li>Mise en page professionnelle assurée par nos soins.</li>
+            </ul>
+        </div>
     </main>
 
-    <aside>
+    <aside class="sidebar">
         <div class="sidebar-box">
-            <div class="sidebar-title">DÉTAILS TECHNIQUES</div>
-            <div class="sidebar-content" style="font-size: 0.8rem;">
-                <p><strong>ISSN (Online):</strong> En cours</p>
-                <p><strong>Fréquence:</strong> 6 Numéros / An</p>
-                <p><strong>Nature:</strong> International</p>
-                <p><strong>Langues:</strong> FR / EN</p>
+            <div class="sidebar-title">Infos Revue</div>
+            <div class="sidebar-content" style="padding: 15px; font-size: 0.85rem;">
+                <p><strong>ISSN :</strong> En cours</p>
+                <p><strong>Fréquence :</strong> 6 numéros / an</p>
+                <p><strong>Délai :</strong> 2-4 semaines</p>
+                <p><strong>Accès :</strong> Open Access</p>
             </div>
         </div>
         <div class="sidebar-box">
-            <div class="sidebar-title">INDEXATION</div>
-            <div class="sidebar-content" style="text-align: center;">
-                <img src="google_scholar.png" width="130" style="margin-bottom: 10px;">
-                <img src="crossref.png" width="130" style="margin-bottom: 10px;">
-                <img src="DOI.png" width="80">
+            <div class="sidebar-title">Indexation</div>
+            <div class="sidebar-content" style="text-align: center; padding: 15px;">
+                <img src="google%20scholar.png" width="130" style="margin-bottom: 15px;">
+                <img src="crossref.png" width="130" style="margin-bottom: 15px;">
+                <img src="ORCID.png" width="130" style="margin-bottom: 15px;">
+                <img src="DOI.png" width="90">
             </div>
         </div>
     </aside>
@@ -128,8 +143,20 @@
 </div>
 
 <footer>
-    <p>&copy; 2026 IJELMH Journal | International Journal of Economics, Law, Management & Humanities</p>
-    <p>Email: revue.ijelmh@gmail.com</p>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h3>IJELMH Journal</h3>
+        <p>Revue Internationale Pluridisciplinaire de Recherche Académique</p>
+        <div class="footer-links">
+            <a href="index.html">Accueil</a> | 
+            <a href="a%20propos.html">À Propos</a> | 
+            <a href="soumission.html">Soumission</a> | 
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 30px; opacity: 0.7; font-size: 0.8rem;">
+            &copy; 2026 International Journal of Economics, Law, Management & Humanities. Tous droits réservés.
+            <br>Email : revue.ijelmh@gmail.com
+        </p>
+    </div>
 </footer>
 
 </body>
