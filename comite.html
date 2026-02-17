@@ -1,101 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | Comité Éditorial Complet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #1a365d; --accent: #c53030; --bg: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #2d3748; line-height: 1.6; }
-        
-        header { background: var(--primary); color: white; padding: 1rem 5%; border-bottom: 4px solid var(--accent); position: sticky; top: 0; z-index: 1000; }
-        .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        .logo-area { display: flex; align-items: center; gap: 15px; }
-        .logo-header { height: 50px; background: white; padding: 5px; border-radius: 5px; }
-        nav a { color: white; text-decoration: none; margin-left: 15px; font-size: 0.9rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3); padding: 5px 10px; border-radius: 4px; transition: 0.3s; }
-        nav a:hover { background: var(--accent); border-color: var(--accent); }
-
-        .hero-section { background: #fff; padding: 40px 20px; text-align: center; border-bottom: 1px solid #eee; }
-        .hero-section h2 { color: var(--primary); font-family: 'Lora', serif; font-size: 2.2rem; margin: 0; }
-        .hero-section p { color: #666; max-width: 800px; margin: 15px auto 0; }
-
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
-        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-        
-        .editor-card { background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .editor-card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .editor-name { font-weight: bold; color: var(--primary); font-size: 1.1rem; display: block; margin-bottom: 5px; }
-        .editor-aff { color: #555; font-size: 0.9rem; font-style: italic; display: block; }
-
-        footer { text-align: center; padding: 3rem; background: #1a365d; color: white; margin-top: 50px; }
-        .footer-info { opacity: 0.8; font-size: 0.9rem; }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="header-content">
-        <div class="logo-area">
-            <img src="logo.png" alt="Logo IJELMH" class="logo-header">
-            <h1 style="margin:0; font-size: 1.2rem;">IJELMH Journal</h1>
-        </div>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="comite.html">Comité Éditorial</a>
-        </nav>
+<main class="main-window">
+    <div class="window-card">
+        <h2>Comité Éditorial International</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr style="background: var(--navy); color: white;">
+                <th style="padding: 12px; text-align: left;">Position</th>
+                <th style="padding: 12px; text-align: left;">Nom et Affiliation</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 15px;"><strong>Directeur de Publication</strong></td>
+                <td style="padding: 15px;">Pr. [Votre Nom], Université de [Ville], Maroc</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 15px;"><strong>Rédacteur en Chef</strong></td>
+                <td style="padding: 15px;">Dr. [Nom], Université de Lyon, France</td>
+            </tr>
+            </table>
     </div>
-</header>
-
-<section class="hero-section">
-    <h2>Editorial & Research Evaluation Board</h2>
-    <p>Notre conseil international de lecture assure l'intégrité académique et les standards de qualité de la recherche pour chaque manuscrit soumis.</p>
-</section>
-
-<div class="container">
-    <div class="editorial-grid">
-        <div class="editor-card"><span class="editor-name">Dr. Milorad Wang</span><span class="editor-aff">USA</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. P. Smith</span><span class="editor-aff">USA</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Mokhtar Beidjehem</span><span class="editor-aff">France</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Ehssan Nassef</span><span class="editor-aff">Egypt</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. M. Khata Jabor</span><span class="editor-aff">Malaysia</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Fateh Mebarek-Oudina</span><span class="editor-aff">Algeria</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. P. Krishna Moorthy</span><span class="editor-aff">Ethiopia</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. Dr. P. V. Kanaka Rao</span><span class="editor-aff">Ethiopia</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. M. M. Bagali</span><span class="editor-aff">Bangalore, India</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Maroof Bin Rauf</span><span class="editor-aff">University of Karachi, Pakistan</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Rajib Kumar Sanyal</span><span class="editor-aff">Associate Professor of Economics, India</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Clement Chimezie Igbokwe</span><span class="editor-aff">Abia State University, Uturu, Nigeria</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Semiu Olawale Makinde</span><span class="editor-aff">Al-Hikmah University, Ilorin, Nigeria</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. Dr. Suha Shihab</span><span class="editor-aff">University of Technology, Baghdad, Iraq</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Thomas Yeboah</span><span class="editor-aff">Universidad Empresarial de Costa Rica</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Emmanuel Ahaotu</span><span class="editor-aff">Imo State Polytechnic, Umuagwo, Nigeria</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Wasike W. Walubengo (PhD)</span><span class="editor-aff">Nairobi, Kenya</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Francis William</span><span class="editor-aff">University of Dodoma, Tanzania</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. Dr. Alireza Heidari</span><span class="editor-aff">California South University (CSU), Irvine, California, USA</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Burak Yahya Kadem</span><span class="editor-aff">Dean, College of Science, Al-Karkh University, Iraq</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. J. Gajendra Naidu</span><span class="editor-aff">Faculty of Commerce, Gaborone University College, Botswana</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Zivanai Mazhambe, CPA(Z)</span><span class="editor-aff">Senior Lecturer, Faculty of Commerce, GSBM</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Tanvir Abir</span><span class="editor-aff">Associate Professor, IUBAT, Dhaka, Bangladesh</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Shahzad Mushtaq</span><span class="editor-aff">Assistant Professor (Economics), Okara University, Pakistan</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Nana Charles Nguindip</span><span class="editor-aff">University of Dschang, Cameroon</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Kobi K. Kobindarajah</span><span class="editor-aff">School of Computer Science & Technology, Canada</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. Valentin Vasilev</span><span class="editor-aff">Higher School of Security and Economics, Plovdiv</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. John Mudiwa</span><span class="editor-aff">Nuclear Physicist; Biomedical Engineer, Botswana</span></div>
-        <div class="editor-card"><span class="editor-name">Prof. John Kanjogu Kiumi</span><span class="editor-aff">Educational Administration, Laikipia University, Kenya</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Maria Teresa Matriano</span><span class="editor-aff">Assistant Professor, Middle East College, Oman</span></div>
-        <div class="editor-card"><span class="editor-name">Emmanuel Jerome Udokang</span><span class="editor-aff">Associate Professor of Philosophy, Akwa Ibom State University</span></div>
-        <div class="editor-card"><span class="editor-name">Dr. Aly Hassan, PhD</span><span class="editor-aff">Assistant Professor of Sports Psychology, Egypt</span></div>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-info">
-        <p><strong>International-Journal of Economics Law Management and Humanities (IJELMH)</strong></p>
-        <p>📧 revue.ijelmh@gmail.com | 📞 WhatsApp : +000 0 00 00 00 00</p>
-        <p style="margin-top: 20px;">&copy; 2026 Tous droits réservés.</p>
-    </div>
-</footer>
-
-</body>
-</html>
+</main>
