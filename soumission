@@ -1,1 +1,15 @@
-
+<div class="main-window">
+    <h2>Soumettre un Manuscrit</h2>
+    <div class="announcement-bar">
+        <strong>Frais de Publication (APC) :</strong> 70 EUROS / 750 MAD
+    </div>
+    <p>Veuillez suivre les étapes suivantes pour votre soumission :</p>
+    <ol>
+        <li>Téléchargez le <strong><a href="Template.docx">Template MS Word</a></strong>.</li>
+        <li>Préparez votre article selon les consignes.</li>
+        <li>Remplissez le formulaire officiel via le lien ci-dessous.</li>
+    </ol>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="https://forms.gle/r5hc5AAqNPgQujVX7" class="btn-action">ACCÉDER AU FORMULAIRE DE SOUMISSION</a>
+    </div>
+</div>
