@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revue Scientifique Multidisciplinaire - Économie, Droit, Sciences Humaines</title>
+    <meta name="description" content="Revue Scientifique Multidisciplinaire - Publication en économie, droit et sciences humaines. Accès ouvert, comité de lecture.">
+    <title>Revue Scientifique Multidisciplinaire | Économie, Droit, Sciences Humaines</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 </head>
 <body>
     <!-- Header -->
@@ -33,21 +35,41 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <button class="search-btn" aria-label="Rechercher">
+                    <button class="search-btn" aria-label="Rechercher" id="search-toggle">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.35-4.35"></path>
                         </svg>
                     </button>
-                    <button class="mobile-menu-btn" aria-label="Menu">
+                    <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-toggle">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
                 </div>
             </div>
+            <!-- Search Bar -->
+            <div class="search-bar" id="search-bar">
+                <form class="search-form">
+                    <input type="text" placeholder="Rechercher un article, auteur, mot-clé...">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </form>
+            </div>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
+                <li><a href="a-propos.html" class="mobile-nav-link">La Revue</a></li>
+                <li><a href="archives.html" class="mobile-nav-link">Archives</a></li>
+                <li><a href="soumission.html" class="mobile-nav-link">Soumettre</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -75,8 +97,8 @@
                         </div>
                     </div>
                     <div class="hero-actions">
-                        <a href="soumission.html" class="btn btn-primary">Soumettre un article</a>
-                        <a href="archives.html" class="btn btn-secondary">Consulter les archives</a>
+                        <a href="soumission.html" class="btn btn-primary btn-lg">Soumettre un article</a>
+                        <a href="archives.html" class="btn btn-secondary btn-lg">Consulter les archives</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -87,7 +109,7 @@
                             <span class="issue-date">Septembre 2025</span>
                             <div class="issue-articles">
                                 <article class="mini-article">
-                                    <span class="article-domain économie">Économie</span>
+                                    <span class="article-domain economie">Économie</span>
                                     <h4>Analyse des politiques monétaires en zone euro</h4>
                                     <span class="article-author">Prof. Marie Dupont</span>
                                 </article>
@@ -102,7 +124,7 @@
                                     <span class="article-author">Prof. Sophie Bernard</span>
                                 </article>
                             </div>
-                            <a href="archives.html" class="btn btn-outline">Voir tous les articles</a>
+                            <a href="archives.html" class="btn btn-outline btn-block">Voir tous les articles</a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +144,12 @@
             </div>
             <div class="domains-grid">
                 <div class="domain-card">
-                    <div class="domain-icon">📈</div>
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 9l-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
                     <h3 class="domain-title">Économie</h3>
                     <p class="domain-description">
                         Macroéconomie, microéconomie, économie internationale, économie du développement, 
@@ -134,10 +161,16 @@
                         <li>Commerce international</li>
                         <li>Économie numérique</li>
                     </ul>
-                    <a href="#" class="domain-link">En savoir plus →</a>
+                    <a href="archives.html?discipline=economie" class="domain-link">En savoir plus →</a>
                 </div>
                 <div class="domain-card">
-                    <div class="domain-icon">⚖️</div>
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
                     <h3 class="domain-title">Droit</h3>
                     <p class="domain-description">
                         Droit civil, droit commercial, droit international, droit européen, 
@@ -149,10 +182,16 @@
                         <li>Régulation économique</li>
                         <li>Protection des données</li>
                     </ul>
-                    <a href="#" class="domain-link">En savoir plus →</a>
+                    <a href="archives.html?discipline=droit" class="domain-link">En savoir plus →</a>
                 </div>
                 <div class="domain-card">
-                    <div class="domain-icon">🧠</div>
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                    </div>
                     <h3 class="domain-title">Sciences Humaines</h3>
                     <p class="domain-description">
                         Sociologie, histoire, philosophie, anthropologie, psychologie sociale, 
@@ -164,7 +203,7 @@
                         <li>Éthique et société</li>
                         <li>Cultures numériques</li>
                     </ul>
-                    <a href="#" class="domain-link">En savoir plus →</a>
+                    <a href="archives.html?discipline=sciences-humaines" class="domain-link">En savoir plus →</a>
                 </div>
             </div>
         </div>
@@ -180,11 +219,11 @@
             <div class="articles-grid">
                 <article class="article-card">
                     <div class="article-meta">
-                        <span class="article-domain-tag économie">Économie</span>
+                        <span class="article-domain-tag economie">Économie</span>
                         <span class="article-date">15 septembre 2025</span>
                     </div>
                     <h3 class="article-title">
-                        <a href="#">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a>
+                        <a href="article.html?id=1">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a>
                     </h3>
                     <p class="article-abstract">
                         Cette étude examine les mécanismes de transmission des politiques monétaires 
@@ -197,7 +236,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="article-citation">DOI: 10.1234/rsm.2025.001</span>
-                        <a href="#" class="article-link">Lire l'article →</a>
+                        <a href="article.html?id=1" class="article-link">Lire l'article →</a>
                     </div>
                 </article>
                 <article class="article-card">
@@ -206,7 +245,7 @@
                         <span class="article-date">10 septembre 2025</span>
                     </div>
                     <h3 class="article-title">
-                        <a href="#">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a>
+                        <a href="article.html?id=2">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a>
                     </h3>
                     <p class="article-abstract">
                         L'émergence des systèmes d'intelligence artificielle soulève des questions 
@@ -219,7 +258,7 @@
                     </div>
                     <div class="article-footer">
                         <span class="article-citation">DOI: 10.1234/rsm.2025.002</span>
-                        <a href="#" class="article-link">Lire l'article →</a>
+                        <a href="article.html?id=2" class="article-link">Lire l'article →</a>
                     </div>
                 </article>
                 <article class="article-card">
@@ -228,192 +267,4 @@
                         <span class="article-date">5 septembre 2025</span>
                     </div>
                     <h3 class="article-title">
-                        <a href="#">Travail hybride et transformations des organisations : Perspectives sociologiques</a>
-                    </h3>
-                    <p class="article-abstract">
-                        Cette recherche analyse les mutations organisationnelles induites par 
-                        l'adoption généralisée du télétravail dans les entreprises françaises, 
-                        à travers une enquête qualitative approfondie.
-                    </p>
-                    <div class="article-authors">
-                        <span class="author">Prof. Sophie Bernard</span>
-                        <span class="affiliation">EHESS, Paris</span>
-                    </div>
-                    <div class="article-footer">
-                        <span class="article-citation">DOI: 10.1234/rsm.2025.003</span>
-                        <a href="#" class="article-link">Lire l'article →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appel à Contributions -->
-    <section class="call-for-papers">
-        <div class="container">
-            <div class="call-content">
-                <div class="call-text">
-                    <span class="call-badge">Appel à contributions</span>
-                    <h2 class="call-title">Numéro spécial : Transitions numériques et transformations sociétales</h2>
-                    <p class="call-description">
-                        La revue lance un appel à contributions pour un numéro spécial consacré aux 
-                        impacts des transformations numériques sur les sociétés contemporaines. 
-                        Les chercheurs sont invités à soumettre leurs travaux interdisciplinaires 
-                        avant le 31 décembre 2025.
-                    </p>
-                    <ul class="call-topics">
-                        <li>Économie des plateformes numériques</li>
-                        <li>Droit du numérique et régulation</li>
-                        <li>Transformations culturelles et sociales</li>
-                        <li>Éthique de l'intelligence artificielle</li>
-                    </ul>
-                    <a href="soumission.html" class="btn btn-primary">Soumettre un article</a>
-                </div>
-                <div class="call-deadlines">
-                    <h3>Dates importantes</h3>
-                    <div class="deadline-item">
-                        <span class="deadline-label">Soumission des résumés</span>
-                        <span class="deadline-date">15 octobre 2025</span>
-                    </div>
-                    <div class="deadline-item">
-                        <span class="deadline-label">Soumission des articles complets</span>
-                        <span class="deadline-date">31 décembre 2025</span>
-                    </div>
-                    <div class="deadline-item">
-                        <span class="deadline-label">Notification aux auteurs</span>
-                        <span class="deadline-date">15 mars 2026</span>
-                    </div>
-                    <div class="deadline-item">
-                        <span class="deadline-label">Publication du numéro</span>
-                        <span class="deadline-date">Juin 2026</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comité Éditorial -->
-    <section class="editorial-board">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Comité Éditorial</h2>
-                <p class="section-description">
-                    Une équipe scientifique reconnue internationalement pour garantir la qualité 
-                    et la rigueur de nos publications.
-                </p>
-            </div>
-            <div class="board-grid">
-                <div class="board-member">
-                    <div class="member-avatar">👤</div>
-                    <h4 class="member-name">Prof. Philippe Durand</h4>
-                    <span class="member-role">Directeur de la publication</span>
-                    <span class="member-affiliation">Université Paris 1 Panthéon-Sorbonne</span>
-                </div>
-                <div class="board-member">
-                    <div class="member-avatar">👤</div>
-                    <h4 class="member-name">Prof. Claire Lefebvre</h4>
-                    <span class="member-role">Rédactrice en chef - Économie</span>
-                    <span class="member-affiliation">Sciences Po Paris</span>
-                </div>
-                <div class="board-member">
-                    <div class="member-avatar">👤</div>
-                    <h4 class="member-name">Prof. Antoine Petit</h4>
-                    <span class="member-role">Rédacteur en chef - Droit</span>
-                    <span class="member-affiliation">Université Paris 2 Panthéon-Assas</span>
-                </div>
-                <div class="board-member">
-                    <div class="member-avatar">👤</div>
-                    <h4 class="member-name">Prof. Marie-Hélène Roux</h4>
-                    <span class="member-role">Rédactrice en chef - Sciences Humaines</span>
-                    <span class="member-affiliation">EHESS, Paris</span>
-                </div>
-            </div>
-            <div class="board-cta">
-                <a href="a-propos.html" class="btn btn-secondary">Voir l'ensemble du comité</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="newsletter-text">
-                    <h2>Restez informé</h2>
-                    <p>Recevez les dernières publications, appels à contributions et annonces de la revue.</p>
-                </div>
-                <form class="newsletter-form" id="newsletter-form">
-                    <input type="email" placeholder="Votre adresse email" required>
-                    <button type="submit" class="btn btn-primary">S'abonner</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-icon">📚</span>
-                        <div class="logo-text">
-                            <span class="logo-title">Revue Scientifique</span>
-                            <span class="logo-subtitle">Multidisciplinaire</span>
-                        </div>
-                    </div>
-                    <p class="footer-description">
-                        Une publication scientifique de référence en économie, droit et sciences humaines, 
-                        au service de la recherche académique et du débat intellectuel.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-link" aria-label="ResearchGate">RG</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>La Revue</h4>
-                    <ul>
-                        <li><a href="a-propos.html">À propos</a></li>
-                        <li><a href="#">Comité éditorial</a></li>
-                        <li><a href="#">Comité scientifique</a></li>
-                        <li><a href="#">Instructions aux auteurs</a></li>
-                        <li><a href="#">Politique éditoriale</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Publications</h4>
-                    <ul>
-                        <li><a href="archives.html">Archives</a></li>
-                        <li><a href="#">Numéros spéciaux</a></li>
-                        <li><a href="#">Articles en préparation</a></li>
-                        <li><a href="#">Suppléments</a></li>
-                        <li><a href="#">Traductions</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Informations</h4>
-                    <ul>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Plan du site</a></li>
-                        <li><a href="#">Accessibilité</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Revue Scientifique Multidisciplinaire. Tous droits réservés.</p>
-                <div class="footer-badges">
-                    <span class="badge">DOAJ</span>
-                    <span class="badge">Crossref</span>
-                    <span class="badge">Open Access</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+                        <a href="article.html?id
