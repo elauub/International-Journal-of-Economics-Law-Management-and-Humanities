@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives - Revue Scientifique Multidisciplinaire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="a-propos.html" class="nav-link">La Revue</a></li>
+                        <li><a href="archives.html" class="nav-link active">Archives</a></li>
+                        <li><a href="soumission.html" class="nav-link">Soumettre</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Archives de la revue</h1>
+            <p>Explorez l'ensemble des publications depuis 2010</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-input-wrapper">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="archive-search" placeholder="Rechercher un article, auteur, mot-clé...">
+                </div>
+                <button class="btn btn-primary">Rechercher</button>
+            </div>
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="filter-discipline">Discipline</label>
+                    <select id="filter-discipline">
+                        <option value="">Toutes les disciplines</option>
+                        <option value="economie">Économie</option>
+                        <option value="droit">Droit</option>
+                        <option value="sciences-humaines">Sciences Humaines</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-year">Année</label>
+                    <select id="filter-year">
+                        <option value="">Toutes les années</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-type">Type</label>
+                    <select id="filter-type">
+                        <option value="">Tous les types</option>
+                        <option value="article">Article de recherche</option>
+                        <option value="note">Note de recherche</option>
+                        <option value="review">Compte rendu</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Issues Navigation -->
+    <section class="issues-nav">
+        <div class="container">
+            <div class="issues-tabs">
+                <button class="issue-tab active" data-view="issues">Par numéro</button>
+                <button class="issue-tab" data-view="articles">Par article</button>
+                <button class="issue-tab" data-view="themes">Par thème</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Issues View -->
+    <section class="issues-section" id="issues-view">
+        <div class="container">
+            <!-- Current Issue -->
+            <div class="current-issue">
+                <div class="issue-header">
+                    <h2>Numéro en cours</h2>
+                    <span class="issue-badge">Vol. 15, No. 3 - Septembre 2025</span>
+                </div>
+                <div class="issue-content">
+                    <div class="issue-info">
+                        <h3>Transitions numériques et transformations sociétales</h3>
+                        <p class="issue-description">
+                            Ce numéro spécial explore les multiples dimensions des transformations 
+                            numériques et leurs impacts sur les sociétés contemporaines.
+                        </p>
+                        <div class="issue-stats">
+                            <span>8 articles</span>
+                            <span>3 disciplines</span>
+                        </div>
+                    </div>
+                    <div class="issue-articles-list">
+                        <article class="issue-article">
+                            <div class="article-meta">
+                                <span class="article-domain-tag économie">Économie</span>
+                                <span class="article-pages">pp. 1-24</span>
+                            </div>
+                            <h4><a href="#">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a></h4>
+                            <div class="article-authors">
+                                <span>Prof. Marie Dupont</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="#" class="action-link">PDF</a>
+                                <a href="#" class="action-link">DOI</a>
+                            </div>
+                        </article>
+                        <article class="issue-article">
+                            <div class="article-meta">
+                                <span class="article-domain-tag droit">Droit</span>
+                                <span class="article-pages">pp. 25-48</span>
+                            </div>
+                            <h4><a href="#">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a></h4>
+                            <div class="article-authors">
+                                <span>Dr. Jean Martin</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="#" class="action-link">PDF</a>
+                                <a href="#" class="action-link">DOI</a>
+                            </div>
+                        </article>
+                        <article class="issue-article">
+                            <div class="article-meta">
+                                <span class="article-domain-tag sh">Sciences Humaines</span>
+                                <span class="article-pages">pp. 49-72</span>
+                            </div>
+                            <h4><a href="#">Travail hybride et transformations des organisations : Perspectives sociologiques</a></h4>
+                            <div class="article-authors">
+                                <span>Prof. Sophie Bernard</span>
+                            </div>
+                            <div class="article-actions">
+                                <a href="#" class="action-link">PDF</a>
+                                <a href="#" class="action-link">DOI</a>
+                            </div>
+                        </article>
+                    </div>
+                    <a href="#" class="btn btn-outline">Voir tous les articles du numéro →</a>
+                </div>
+            </div>
+
+            <!-- Back Issues -->
+            <div class="back-issues">
+                <h2>Numéros précédents</h2>
+                <div class="issues-grid">
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 15, No. 2</span>
+                            <span class="issue-date">Juin 2025</span>
+                        </div>
+                        <h3>Économie circulaire et développement durable</h3>
+                        <p class="issue-article-count">10 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 15, No. 1</span>
+                            <span class="issue-date">Mars 2025</span>
+                        </div>
+                        <h3>Droits fondamentaux et transitions écologiques</h3>
+                        <p class="issue-article-count">12 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 14, No. 4</span>
+                            <span class="issue-date">Décembre 2024</span>
+                        </div>
+                        <h3>Gouvernance mondiale et multilatéralisme</h3>
+                        <p class="issue-article-count">9 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 14, No. 3</span>
+                            <span class="issue-date">Septembre 2024</span>
+                        </div>
+                        <h3>Inégalités sociales et économiques</h3>
+                        <p class="issue-article-count">11 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 14, No. 2</span>
+                            <span class="issue-date">Juin 2024</span>
+                        </div>
+                        <h3>Innovation technologique et société</h3>
+                        <p class="issue-article-count">8 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                    <div class="issue-card">
+                        <div class="issue-card-header">
+                            <span class="issue-volume">Vol. 14, No. 1</span>
+                            <span class="issue-date">Mars 2024</span>
+                        </div>
+                        <h3>Démocraties et défis contemporains</h3>
+                        <p class="issue-article-count">10 articles</p>
+                        <a href="#" class="issue-link">Consulter le numéro →</a>
+                    </div>
+                </div>
+                <div class="archives-pagination">
+                    <button class="btn btn-secondary">Numéros plus anciens →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles View (Hidden by default) -->
+    <section class="articles-view hidden" id="articles-view">
+        <div class="container">
+            <div class="articles-list">
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-domain-tag économie">Économie</span>
+                        <span class="article-date">15 septembre 2025</span>
+                    </div>
+                    <div class="article-content">
+                        <h3><a href="#">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a></h3>
+                        <p class="article-abstract">
+                            Cette étude examine les mécanismes de transmission des politiques monétaires 
+                            dans le contexte inflationniste actuel...
+                        </p>
+                        <div class="article-authors">
+                            <span class="author">Prof. Marie Dupont</span>
+                            <span class="affiliation">Université Paris-Saclay</span>
+                        </div>
+                    </div>
+                    <div class="article-citation">
+                        <span>DOI: 10.1234/rsm.2025.001</span>
+                        <span>Vol. 15, No. 3, pp. 1-24</span>
+                    </div>
+                </article>
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-domain-tag droit">Droit</span>
+                        <span class="article-date">10 septembre 2025</span>
+                    </div>
+                    <div class="article-content">
+                        <h3><a href="#">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a></h3>
+                        <p class="article-abstract">
+                            L'émergence des systèmes d'intelligence artificielle soulève des questions 
+                            fondamentales en matière de responsabilité civile...
+                        </p>
+                        <div class="article-authors">
+                            <span class="author">Dr. Jean Martin</span>
+                            <span class="affiliation">Université de Bordeaux</span>
+                        </div>
+                    </div>
+                    <div class="article-citation">
+                        <span>DOI: 10.1234/rsm.2025.002</span>
+                        <span>Vol. 15, No. 3, pp. 25-48</span>
+                    </div>
+                </article>
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-domain-tag sh">Sciences Humaines</span>
+                        <span class="article-date">5 septembre 2025</span>
+                    </div>
+                    <div class="article-content">
+                        <h3><a href="#">Travail hybride et transformations des organisations : Perspectives sociologiques</a></h3>
+                        <p class="article-abstract">
+                            Cette recherche analyse les mutations organisationnelles induites par 
+                            l'adoption généralisée du télétravail...
+                        </p>
+                        <div class="article-authors">
+                            <span class="author">Prof. Sophie Bernard</span>
+                            <span class="affiliation">EHESS, Paris</span>
+                        </div>
+                    </div>
+                    <div class="article-citation">
+                        <span>DOI: 10.1234/rsm.2025.003</span>
+                        <span>Vol. 15, No. 3, pp. 49-72</span>
+                    </div>
+                </article>
+            </div>
+            <div class="articles-pagination">
+                <button class="btn btn-secondary">Articles plus anciens</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Une publication scientifique de référence en économie, droit et sciences humaines.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>La Revue</h4>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="soumission.html">Soumettre</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Revue Scientifique Multidisciplinaire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
