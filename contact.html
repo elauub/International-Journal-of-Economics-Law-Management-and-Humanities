@@ -3,32 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | Contact</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --main: #002349; --gold: #c5a059; --light-gold: #fcf8ef; --text: #2d3436; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #fdfdfd; color: var(--text); }
-        header { background: linear-gradient(135deg, var(--main) 0%, #004080 100%); color: white; padding: 60px 5%; text-align: center; border-bottom: 6px solid var(--gold); }
-        header h1 { font-family: 'Montserrat'; font-weight: 900; font-size: 2.2rem; margin: 0; text-transform: uppercase; }
-        nav { background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav a { display: block; padding: 22px 18px; color: var(--main); text-decoration: none; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--gold); background: var(--light-gold); }
-        .content-grid { max-width: 1000px; margin: 40px auto; padding: 0 5%; }
-        .rich-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #eef2f7; text-align: center; }
-        footer { background: #001832; color: white; padding: 60px 5%; text-align: center; margin-top: 50px; }
-    </style>
+    <title>Contact - Revue Scientifique Multidisciplinaire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header><h1>Contactez l'IJELMH</h1></header>
-<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="a-propos.html">À Propos</a></li><li><a href="comite.html">Comité Éditorial</a></li><li><a href="information.html">Directives</a></li><li><a href="indexation.html">Indexation</a></li><li><a href="issue.html">Archives</a></li><li><a href="soumission.html">Soumission</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-<div class="content-grid">
-    <div class="rich-card">
-        <h2 style="color: var(--main); font-family: 'Montserrat';">Informations de Contact</h2>
-        <p>Email principal : <strong>revue.ijelmh@gmail.com</strong></p>
-        <p>Adresse : Faculté des Sciences Juridiques, Économiques et Sociales, Maroc</p>
-    </div>
-</div>
-<footer><p>&copy; 2026 IJELMH Journal</p></footer>
-</body>
-</html>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="a-propos.html" class="nav-link">La Revue</a></li>
+                        <li><a href="archives.html" class="nav-link">Archives</a></li>
+                        <li><a href="soumission.html" class="nav-link">Soumettre</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Notre équipe est à votre disposition pour répondre à vos questions</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Informations de contact</h2>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h4>Rédaction générale</h4>
+                            <p>Questions sur la revue, partenariats, informations diverses</p>
+                            <a href="mailto:redaction@revue-scientifique.fr">redaction@revue-scientifique.fr</a>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">📝</div>
+                            <h4>Soumissions d'articles</h4>
+                            <p>Suivi de votre soumission, questions éditoriales</p>
+                            <a href="mailto:soumissions@revue-scientifique.fr">soumissions@revue-scientifique.fr</a>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">💰</div>
+                            <h4>Administration et finances</h4>
+                            <p>Facturation, abonnements, partenariats financiers</p>
+                            <a href="mailto:admin@revue-scientifique.fr">admin@revue-scientifique.fr</a>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">🌐</div>
+                            <h4>Support technique</h4>
+                            <p>Problèmes avec le site, accès, téléchargement</p>
+                            <a href="mailto:support@revue-scientifique.fr">support@revue-scientifique.fr</a>
+                        </div>
+                    </div>
+                    
+                    <div class="address-block">
+                        <h4>Adresse postale</h4>
+                        <address>
+                            <strong>Revue Scientifique Multidisciplinaire</strong><br>
+                            Université Paris-Saclay<br>
+                            Bâtiment Main<br>
+                            91400 Orsay, France
+                        </address>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2>Envoyez un message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nom complet *</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email institutionnel *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-affiliation">Institution de rattachement</label>
+                            <input type="text" id="contact-affiliation" name="affiliation">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Sujet *</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet...</option>
+                                <option value="question-editoriale">Question éditoriale</option>
+                                <option value="soumission">Soumission d'article</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="abonnement">Abonnement / achat</option>
+                                <option value="reclamation">Réclamation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="6" required
+                                      placeholder="Rédigez votre message ici..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-files">Pièces jointes (optionnel)</label>
+                            <input type="file" id="contact-files" name="files" accept=".pdf,.doc,.docx,.jpg,.png">
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span>S'abonner à la newsletter de la revue</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Questions fréquentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Quel est le délai de réponse pour une soumission ?</h3>
+                    <p>Nous nous efforçons de fournir un premier retour aux auteurs dans un délai de 6 à 8 semaines suivant la soumission. Ce délai peut varier en fonction de la disponibilité des évaluateurs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>La revue est-elle en accès ouvert ?</h3>
+                    <p>Oui, tous les articles publiés dans notre revue sont disponibles en accès ouvert immédiat, sans frais pour les auteurs ou les lecteurs. Les articles sont publiés sous licence CC BY 4.0.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Quels sont les critères d'acceptation ?</h3>
+                    <p>Les articles
