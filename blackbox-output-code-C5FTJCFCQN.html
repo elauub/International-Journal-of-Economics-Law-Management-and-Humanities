@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revue Scientifique Multidisciplinaire - Publication en économie, droit et sciences humaines. Accès ouvert, comité de lecture.">
+    <title>Revue Scientifique Multidisciplinaire | Économie, Droit, Sciences Humaines</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li><a href="a-propos.html" class="nav-link">La Revue</a></li>
+                        <li><a href="archives.html" class="nav-link">Archives</a></li>
+                        <li><a href="soumission.html" class="nav-link">Soumettre</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher" id="search-toggle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar" id="search-bar">
+                <form class="search-form">
+                    <input type="text" placeholder="Rechercher un article, auteur, mot-clé...">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
+                <li><a href="a-propos.html" class="mobile-nav-link">La Revue</a></li>
+                <li><a href="archives.html" class="mobile-nav-link">Archives</a></li>
+                <li><a href="soumission.html" class="mobile-nav-link">Soumettre</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Revue scientifique à comité de lecture</span>
+                    <h1 class="hero-title">Revue Multidisciplinaire en Économie, Droit et Sciences Humaines</h1>
+                    <p class="hero-description">
+                        Une publication scientifique de référence offrant un espace de réflexion et de débat 
+                        pour les chercheurs en sciences sociales. Indexée dans les bases de données académiques internationales.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Articles publiés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Années d'existence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">Pays représentés</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="soumission.html" class="btn btn-primary btn-lg">Soumettre un article</a>
+                        <a href="archives.html" class="btn btn-secondary btn-lg">Consulter les archives</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="latest-issue">
+                            <span class="issue-label">Dernier numéro</span>
+                            <span class="issue-number">Vol. 15, No. 3</span>
+                            <span class="issue-date">Septembre 2025</span>
+                            <div class="issue-articles">
+                                <article class="mini-article">
+                                    <span class="article-domain economie">Économie</span>
+                                    <h4>Analyse des politiques monétaires en zone euro</h4>
+                                    <span class="article-author">Prof. Marie Dupont</span>
+                                </article>
+                                <article class="mini-article">
+                                    <span class="article-domain droit">Droit</span>
+                                    <h4>Protection des données personnelles : enjeux juridiques</h4>
+                                    <span class="article-author">Dr. Jean Martin</span>
+                                </article>
+                                <article class="mini-article">
+                                    <span class="article-domain sh">Sciences Humaines</span>
+                                    <h4>Numérique et transformation des pratiques culturelles</h4>
+                                    <span class="article-author">Prof. Sophie Bernard</span>
+                                </article>
+                            </div>
+                            <a href="archives.html" class="btn btn-outline btn-block">Voir tous les articles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domaines Section -->
+    <section class="domains">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Domaines de Publication</h2>
+                <p class="section-description">
+                    Une approche multidisciplinaire au service de la compréhension des phénomènes sociaux, 
+                    économiques et juridiques contemporains.
+                </p>
+            </div>
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 9l-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">Économie</h3>
+                    <p class="domain-description">
+                        Macroéconomie, microéconomie, économie internationale, économie du développement, 
+                        finance, économie comportementale et histoire économique.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Politiques économiques</li>
+                        <li>Marchés financiers</li>
+                        <li>Commerce international</li>
+                        <li>Économie numérique</li>
+                    </ul>
+                    <a href="archives.html?discipline=economie" class="domain-link">En savoir plus →</a>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">Droit</h3>
+                    <p class="domain-description">
+                        Droit civil, droit commercial, droit international, droit européen, 
+                        droit du numérique, droit de l'environnement et philosophie du droit.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Droit des affaires</li>
+                        <li>Droit international privé</li>
+                        <li>Régulation économique</li>
+                        <li>Protection des données</li>
+                    </ul>
+                    <a href="archives.html?discipline=droit" class="domain-link">En savoir plus →</a>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">Sciences Humaines</h3>
+                    <p class="domain-description">
+                        Sociologie, histoire, philosophie, anthropologie, psychologie sociale, 
+                        sciences politiques et études culturelles.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Transformations sociales</li>
+                        <li>Histoire contemporaine</li>
+                        <li>Éthique et société</li>
+                        <li>Cultures numériques</li>
+                    </ul>
+                    <a href="archives.html?discipline=sciences-humaines" class="domain-link">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Derniers Articles Section -->
+    <section class="latest-articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Derniers Articles Publiés</h2>
+                <a href="archives.html" class="section-link">Voir tous les articles →</a>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag economie">Économie</span>
+                        <span class="article-date">15 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="article.html?id=1">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a>
+                    </h3>
+                    <p class="article-abstract">
+                        Cette étude examine les mécanismes de transmission des politiques monétaires 
+                        dans le contexte inflationniste actuel, en comparant les approches de la BCE, 
+                        de la Fed et de la Banque du Japon.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Prof. Marie Dupont</span>
+                        <span class="affiliation">Université Paris-Saclay</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.001</span>
+                        <a href="article.html?id=1" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag droit">Droit</span>
+                        <span class="article-date">10 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="article.html?id=2">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a>
+                    </h3>
+                    <p class="article-abstract">
+                        L'émergence des systèmes d'intelligence artificielle soulève des questions 
+                        fondamentales en matière de responsabilité civile et pénale. Cet article 
+                        propose un cadre analytique pour appréhender ces enjeux.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Dr. Jean Martin</span>
+                        <span class="affiliation">Université de Bordeaux</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.002</span>
+                        <a href="article.html?id=2" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag sh">Sciences Humaines</span>
+                        <span class="article-date">5 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="article.html?id=3">Travail hybride et transformations des organisations : Perspectives sociologiques</a>
+                    </h3>
+                    <p class="article-abstract">
+                        Cette recherche analyse les mutations organisationnelles induites par 
+                        l'adoption généralisée du télétravail dans les entreprises françaises, 
+                        à travers une enquête qualitative approfondie.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Prof. Sophie Bernard</span>
+                        <span class="affiliation">EHESS, Paris</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.003</span>
+                        <a href="article.html?id=3" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appel à Contributions -->
+    <section class="call-for-papers">
+        <div class="container">
+            <div class="call-content">
+                <div class="call-text">
+                    <span class="call-badge">Appel à contributions</span>
+                    <h2 class="call-title">Numéro spécial : Transitions numériques et transformations sociétales</h2>
+                    <p class="call-description">
+                        La revue lance un appel à contributions pour un numéro spécial consacré aux 
+                        impacts des transformations numériques sur les sociétés contemporaines. 
+                        Les chercheurs sont invités à soumettre leurs travaux interdisciplinaires 
+                        avant le 31 décembre 2025.
+                    </p>
+                    <ul class="call-topics">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Économie des plateformes numériques
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Droit du numérique et régulation
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Transformations culturelles et sociales
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            Éthique de l'intelligence artificielle
+                        </li>
+                    </ul>
+                    <a href="soumission.html" class="btn btn-primary btn-lg">Soumettre un article</a>
+                </div>
+                <div class="call-deadlines">
+                    <h3>Dates importantes</h3>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Soumission des résumés</span>
+                        <span class="deadline-date">15 octobre 2025</span>
+                    </div>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Soumission des articles complets</span>
+                        <span class="deadline-date">31 décembre 2025</span>
+                    </div>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Notification aux auteurs</span>
+                        <span class="deadline-date">15 mars
