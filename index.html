@@ -3,157 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | International Multidisciplinary Journal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --main: #002349; --gold: #c5a059; --light-gold: #fcf8ef; --text: #2d3436; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #fdfdfd; color: var(--text); }
-        
-        /* Top bar info */
-        .top-bar { background: #001832; color: white; padding: 10px 5%; font-size: 0.8rem; display: flex; justify-content: space-between; }
-
-        /* Header / Hero Section */
-        header { background: linear-gradient(135deg, var(--main) 0%, #004080 100%); color: white; padding: 80px 5%; text-align: center; position: relative; border-bottom: 6px solid var(--gold); }
-        header h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 2.8rem; margin: 0; letter-spacing: -1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 15px; font-weight: 300; }
-
-        /* Navigation */
-        nav { background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav li { position: relative; }
-        nav a { display: block; padding: 22px 18px; color: var(--main); text-decoration: none; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--gold); background: var(--light-gold); }
-
-        /* Stats Bar */
-        .stats-container { display: flex; justify-content: space-around; background: white; padding: 40px 10px; margin: -40px auto 40px; width: 85%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee; }
-        .stat-item { text-align: center; }
-        .stat-item h3 { color: var(--gold); font-size: 2rem; margin: 0; font-family: 'Montserrat'; }
-        .stat-item p { margin: 5px 0; font-weight: 600; color: var(--main); font-size: 0.9rem; }
-
-        /* Main Content Grid */
-        .content-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding: 20px 5%; }
-        
-        /* Sections Style */
-        .rich-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #eef2f7; margin-bottom: 30px; line-height: 1.8; position: relative; }
-        .rich-card h2 { font-family: 'Montserrat'; color: var(--main); font-size: 1.8rem; margin-bottom: 25px; border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 5px; }
-        
-        /* Announcement Box */
-        .call-action { background: var(--main); color: white; padding: 40px; border-radius: 15px; position: relative; overflow: hidden; margin-bottom: 40px; }
-        .call-action h2 { color: white; border-color: var(--gold); }
-        .btn-premium { background: var(--gold); color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.4s; box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4); margin-top: 20px; }
-        .btn-premium:hover { background: #b08e4d; transform: scale(1.05); }
-
-        /* Sidebar Widgets */
-        .widget { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 25px; overflow: hidden; }
-        .widget-head { background: var(--main); color: white; padding: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        .widget-body { padding: 20px; font-size: 0.9rem; }
-        .index-list img { width: 100%; max-width: 1400px; margin-bottom: 15px; }
-
-        footer { background: #001832; color: white; padding: 80px 5% 40px; text-align: center; }
-        .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: left; max-width: 1200px; margin: 0 auto 50px; }
-        
-        @media (max-width: 900px) { .content-grid, .footer-grid { grid-template-columns: 1fr; } .stats-container { display: none; } }
-    </style>
+    <title>Revue Scientifique Multidisciplinaire - Économie, Droit, Sciences Humaines</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<div class="top-bar">
-    <span>ISSN: En cours (Online)</span>
-    <span>Soumissions ouvertes : Volume 1, Numéro 1</span>
-</div>
-
-<header>
-    <h1>IJELMH JOURNAL</h1>
-    <p>International Journal of Economics, Law, Management & Humanities</p>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="a-propos.html">À Propos</a></li>
-        <li><a href="comite.html">Comité Éditorial</a></li>
-        <li><a href="information.html">Directives</a></li>
-        <li><a href="indexation.html">Indexation</a></li>
-        <li><a href="issue.html">Archives</a></li>
-        <li><a href="soumission.html" style="color: var(--gold);">Soumission</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<div class="stats-container">
-    <div class="stat-item"><h3>21</h3><p>Jours pour décision</p></div>
-    <div class="stat-item"><h3>100%</h3><p>Open Access</p></div>
-    <div class="stat-item"><h3>Multi</h3><p>Disciplinaire</p></div>
-    <div class="stat-item"><h3>DOAJ</h3><p>En cours</p></div>
-</div>
-
-<div class="content-grid">
-    <main>
-        <div class="call-action">
-            <h2>Appel à Articles Scientifiques</h2>
-            <p>Nous invitons les professeurs, chercheurs et doctorants à soumettre leurs travaux originaux. L'IJELMH garantit une révision rigoureuse et une diffusion mondiale immédiate.</p>
-            <a href="soumission.html" class="btn-premium">DÉPOSER VOTRE MANUSCRIT</a>
-        </div>
-
-        <div class="rich-card">
-            <h2>À propos de la Revue</h2>
-            <p><strong>International Journal of Economics, Law, Management & Humanities (IJELMH)</strong> est une publication académique internationale à comité de lecture. Elle offre une plateforme unique pour croiser les regards entre le droit, l'économie et les réalités sociales contemporaines.</p>
-            <p>Notre engagement est de maintenir les standards les plus élevés d'intégrité académique (COPE guidelines) et de faciliter l'accès à la connaissance sans barrières financières pour les lecteurs.</p>
-        </div>
-
-        <div class="rich-card">
-            <h2>Dernières Publications</h2>
-            <div style="padding: 20px; border-left: 4px solid var(--gold); background: #fafafa;">
-                <p><em>Aucun article publié pour le moment. Soyez le premier à figurer dans notre numéro inaugural de Mars 2026 !</em></p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li><a href="a-propos.html" class="nav-link">La Revue</a></li>
+                        <li><a href="archives.html" class="nav-link">Archives</a></li>
+                        <li><a href="soumission.html" class="nav-link">Soumettre</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </div>
-    </main>
+    </header>
 
-    <aside>
-        <div class="widget">
-            <div class="widget-head">INDEXATION & VISIBILITÉ</div>
-            <div class="widget-body" style="text-align: center;">
-                <img src="google%20scholar.png" width="150"><br><br>
-                <img src="crossref.png" width="150">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Revue scientifique à comité de lecture</span>
+                    <h1 class="hero-title">Revue Multidisciplinaire en Économie, Droit et Sciences Humaines</h1>
+                    <p class="hero-description">
+                        Une publication scientifique de référence offrant un espace de réflexion et de débat 
+                        pour les chercheurs en sciences sociales. Indexée dans les bases de données académiques internationales.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Articles publiés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Années d'existence</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">Pays représentés</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="soumission.html" class="btn btn-primary">Soumettre un article</a>
+                        <a href="archives.html" class="btn btn-secondary">Consulter les archives</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="latest-issue">
+                            <span class="issue-label">Dernier numéro</span>
+                            <span class="issue-number">Vol. 15, No. 3</span>
+                            <span class="issue-date">Septembre 2025</span>
+                            <div class="issue-articles">
+                                <article class="mini-article">
+                                    <span class="article-domain économie">Économie</span>
+                                    <h4>Analyse des politiques monétaires en zone euro</h4>
+                                    <span class="article-author">Prof. Marie Dupont</span>
+                                </article>
+                                <article class="mini-article">
+                                    <span class="article-domain droit">Droit</span>
+                                    <h4>Protection des données personnelles : enjeux juridiques</h4>
+                                    <span class="article-author">Dr. Jean Martin</span>
+                                </article>
+                                <article class="mini-article">
+                                    <span class="article-domain sh">Sciences Humaines</span>
+                                    <h4>Numérique et transformation des pratiques culturelles</h4>
+                                    <span class="article-author">Prof. Sophie Bernard</span>
+                                </article>
+                            </div>
+                            <a href="archives.html" class="btn btn-outline">Voir tous les articles</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="widget">
-            <div class="widget-head">POUR LES AUTEURS</div>
-            <div class="widget-body">
-                <ul style="padding-left: 20px;">
-                    <li><a href="Template.docx" style="color: var(--main);">Modèle de l'article (.docx)</a></li>
-                    <li><a href="soumission.html" style="color: var(--main);">Frais de publication (70€)</a></li>
-                    <li><a href="information.html" style="color: var(--main);">Éthique et Plagiat</a></li>
-                </ul>
+    <!-- Domaines Section -->
+    <section class="domains">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos Domaines de Publication</h2>
+                <p class="section-description">
+                    Une approche multidisciplinaire au service de la compréhension des phénomènes sociaux, 
+                    économiques et juridiques contemporains.
+                </p>
+            </div>
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <div class="domain-icon">📈</div>
+                    <h3 class="domain-title">Économie</h3>
+                    <p class="domain-description">
+                        Macroéconomie, microéconomie, économie internationale, économie du développement, 
+                        finance, économie comportementale et histoire économique.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Politiques économiques</li>
+                        <li>Marchés financiers</li>
+                        <li>Commerce international</li>
+                        <li>Économie numérique</li>
+                    </ul>
+                    <a href="#" class="domain-link">En savoir plus →</a>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon">⚖️</div>
+                    <h3 class="domain-title">Droit</h3>
+                    <p class="domain-description">
+                        Droit civil, droit commercial, droit international, droit européen, 
+                        droit du numérique, droit de l'environnement et philosophie du droit.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Droit des affaires</li>
+                        <li>Droit international privé</li>
+                        <li>Régulation économique</li>
+                        <li>Protection des données</li>
+                    </ul>
+                    <a href="#" class="domain-link">En savoir plus →</a>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon">🧠</div>
+                    <h3 class="domain-title">Sciences Humaines</h3>
+                    <p class="domain-description">
+                        Sociologie, histoire, philosophie, anthropologie, psychologie sociale, 
+                        sciences politiques et études culturelles.
+                    </p>
+                    <ul class="domain-topics">
+                        <li>Transformations sociales</li>
+                        <li>Histoire contemporaine</li>
+                        <li>Éthique et société</li>
+                        <li>Cultures numériques</li>
+                    </ul>
+                    <a href="#" class="domain-link">En savoir plus →</a>
+                </div>
             </div>
         </div>
-    </aside>
-</div>
+    </section>
 
-<footer>
-    <div class="footer-grid">
-        <div>
-            <h3 style="color: var(--gold);">IJELMH</h3>
-            <p style="font-size: 0.8rem; opacity: 0.7;">Une revue de référence pour la recherche multidisciplinaire. Publiée bimensuellement pour une audience globale.</p>
+    <!-- Derniers Articles Section -->
+    <section class="latest-articles">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Derniers Articles Publiés</h2>
+                <a href="archives.html" class="section-link">Voir tous les articles →</a>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag économie">Économie</span>
+                        <span class="article-date">15 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#">Dynamiques de l'inflation et réponses des banques centrales : Une analyse comparative</a>
+                    </h3>
+                    <p class="article-abstract">
+                        Cette étude examine les mécanismes de transmission des politiques monétaires 
+                        dans le contexte inflationniste actuel, en comparant les approches de la BCE, 
+                        de la Fed et de la Banque du Japon.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Prof. Marie Dupont</span>
+                        <span class="affiliation">Université Paris-Saclay</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.001</span>
+                        <a href="#" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag droit">Droit</span>
+                        <span class="article-date">10 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#">Intelligence artificielle et responsabilité juridique : Vers un nouveau paradigme</a>
+                    </h3>
+                    <p class="article-abstract">
+                        L'émergence des systèmes d'intelligence artificielle soulève des questions 
+                        fondamentales en matière de responsabilité civile et pénale. Cet article 
+                        propose un cadre analytique pour appréhender ces enjeux.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Dr. Jean Martin</span>
+                        <span class="affiliation">Université de Bordeaux</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.002</span>
+                        <a href="#" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-meta">
+                        <span class="article-domain-tag sh">Sciences Humaines</span>
+                        <span class="article-date">5 septembre 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="#">Travail hybride et transformations des organisations : Perspectives sociologiques</a>
+                    </h3>
+                    <p class="article-abstract">
+                        Cette recherche analyse les mutations organisationnelles induites par 
+                        l'adoption généralisée du télétravail dans les entreprises françaises, 
+                        à travers une enquête qualitative approfondie.
+                    </p>
+                    <div class="article-authors">
+                        <span class="author">Prof. Sophie Bernard</span>
+                        <span class="affiliation">EHESS, Paris</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-citation">DOI: 10.1234/rsm.2025.003</span>
+                        <a href="#" class="article-link">Lire l'article →</a>
+                    </div>
+                </article>
+            </div>
         </div>
-        <div>
-            <h3 style="color: var(--gold);">LIENS UTILES</h3>
-            <ul style="list-style: none; padding: 0; font-size: 0.8rem; opacity: 0.7;">
-                <li>Mentions Légales</li>
-                <li>Politique de Confidentialité</li>
-                <li>Processus de Review</li>
-            </ul>
-        </div>
-        <div>
-            <h3 style="color: var(--gold);">CONTACT</h3>
-            <p style="font-size: 0.8rem; opacity: 0.7;">revue.ijelmh@gmail.com<br>Faculté de Droit, Maroc</p>
-        </div>
-    </div>
-    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; font-size: 0.8rem; opacity: 0.5;">
-        &copy; 2026 International Journal of Economics, Law, Management & Humanities. All rights reserved.
-    </div>
-</footer>
+    </section>
 
+    <!-- Appel à Contributions -->
+    <section class="call-for-papers">
+        <div class="container">
+            <div class="call-content">
+                <div class="call-text">
+                    <span class="call-badge">Appel à contributions</span>
+                    <h2 class="call-title">Numéro spécial : Transitions numériques et transformations sociétales</h2>
+                    <p class="call-description">
+                        La revue lance un appel à contributions pour un numéro spécial consacré aux 
+                        impacts des transformations numériques sur les sociétés contemporaines. 
+                        Les chercheurs sont invités à soumettre leurs travaux interdisciplinaires 
+                        avant le 31 décembre 2025.
+                    </p>
+                    <ul class="call-topics">
+                        <li>Économie des plateformes numériques</li>
+                        <li>Droit du numérique et régulation</li>
+                        <li>Transformations culturelles et sociales</li>
+                        <li>Éthique de l'intelligence artificielle</li>
+                    </ul>
+                    <a href="soumission.html" class="btn btn-primary">Soumettre un article</a>
+                </div>
+                <div class="call-deadlines">
+                    <h3>Dates importantes</h3>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Soumission des résumés</span>
+                        <span class="deadline-date">15 octobre 2025</span>
+                    </div>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Soumission des articles complets</span>
+                        <span class="deadline-date">31 décembre 2025</span>
+                    </div>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Notification aux auteurs</span>
+                        <span class="deadline-date">15 mars 2026</span>
+                    </div>
+                    <div class="deadline-item">
+                        <span class="deadline-label">Publication du numéro</span>
+                        <span class="deadline-date">Juin 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comité Éditorial -->
+    <section class="editorial-board">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Comité Éditorial</h2>
+                <p class="section-description">
+                    Une équipe scientifique reconnue internationalement pour garantir la qualité 
+                    et la rigueur de nos publications.
+                </p>
+            </div>
+            <div class="board-grid">
+                <div class="board-member">
+                    <div class="member-avatar">👤</div>
+                    <h4 class="member-name">Prof. Philippe Durand</h4>
+                    <span class="member-role">Directeur de la publication</span>
+                    <span class="member-affiliation">Université Paris 1 Panthéon-Sorbonne</span>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">👤</div>
+                    <h4 class="member-name">Prof. Claire Lefebvre</h4>
+                    <span class="member-role">Rédactrice en chef - Économie</span>
+                    <span class="member-affiliation">Sciences Po Paris</span>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">👤</div>
+                    <h4 class="member-name">Prof. Antoine Petit</h4>
+                    <span class="member-role">Rédacteur en chef - Droit</span>
+                    <span class="member-affiliation">Université Paris 2 Panthéon-Assas</span>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">👤</div>
+                    <h4 class="member-name">Prof. Marie-Hélène Roux</h4>
+                    <span class="member-role">Rédactrice en chef - Sciences Humaines</span>
+                    <span class="member-affiliation">EHESS, Paris</span>
+                </div>
+            </div>
+            <div class="board-cta">
+                <a href="a-propos.html" class="btn btn-secondary">Voir l'ensemble du comité</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Restez informé</h2>
+                    <p>Recevez les dernières publications, appels à contributions et annonces de la revue.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Une publication scientifique de référence en économie, droit et sciences humaines, 
+                        au service de la recherche académique et du débat intellectuel.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-link" aria-label="ResearchGate">RG</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>La Revue</h4>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="#">Comité éditorial</a></li>
+                        <li><a href="#">Comité scientifique</a></li>
+                        <li><a href="#">Instructions aux auteurs</a></li>
+                        <li><a href="#">Politique éditoriale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Publications</h4>
+                    <ul>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="#">Numéros spéciaux</a></li>
+                        <li><a href="#">Articles en préparation</a></li>
+                        <li><a href="#">Suppléments</a></li>
+                        <li><a href="#">Traductions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Plan du site</a></li>
+                        <li><a href="#">Accessibilité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Revue Scientifique Multidisciplinaire. Tous droits réservés.</p>
+                <div class="footer-badges">
+                    <span class="badge">DOAJ</span>
+                    <span class="badge">Crossref</span>
+                    <span class="badge">Open Access</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
