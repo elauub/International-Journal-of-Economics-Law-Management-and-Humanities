@@ -3,34 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJELMH | Soumission</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --main: #002349; --gold: #c5a059; --light-gold: #fcf8ef; --text: #2d3436; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: #fdfdfd; color: var(--text); }
-        header { background: linear-gradient(135deg, var(--main) 0%, #004080 100%); color: white; padding: 60px 5%; text-align: center; border-bottom: 6px solid var(--gold); }
-        header h1 { font-family: 'Montserrat'; font-weight: 900; font-size: 2.2rem; margin: 0; text-transform: uppercase; }
-        nav { background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
-        nav a { display: block; padding: 22px 18px; color: var(--main); text-decoration: none; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: var(--gold); background: var(--light-gold); }
-        .content-grid { max-width: 1000px; margin: 40px auto; padding: 0 5%; }
-        .rich-card { background: white; padding: 40px; border-radius: 12px; border: 1px solid #eef2f7; box-shadow: 0 4px 6px rgba(0,0,0,0.02); text-align: center; }
-        .btn-gold { background: var(--gold); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 25px; box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4); }
-        footer { background: #001832; color: white; padding: 60px 5%; text-align: center; margin-top: 50px; }
-    </style>
+    <title>Soumettre un article - Revue Scientifique Multidisciplinaire</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header><h1>Soumettre mon Manuscrit</h1></header>
-<nav><ul><li><a href="index.html">Accueil</a></li><li><a href="a-propos.html">À Propos</a></li><li><a href="comite.html">Comité Éditorial</a></li><li><a href="information.html">Directives</a></li><li><a href="indexation.html">Indexation</a></li><li><a href="issue.html">Archives</a></li><li><a href="soumission.html">Soumission</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-<div class="content-grid">
-    <div class="rich-card">
-        <h2 style="border-bottom: 3px solid var(--gold); display: inline-block;">Dépôt d'Article</h2>
-        <p>Les frais de publication s'élèvent à <strong>70 EUROS (750 MAD)</strong> pour le libre accès.</p>
-        <p>Préparez votre fichier au format Word selon le template officiel.</p>
-        <a href="https://forms.gle/r5hc5AAqNPgQujVX7" class="btn-gold">ACCÉDER AU FORMULAIRE EN LIGNE</a>
-    </div>
-</div>
-<footer><p>&copy; 2026 IJELMH Journal</p></footer>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="a-propos.html" class="nav-link">La Revue</a></li>
+                        <li><a href="archives.html" class="nav-link">Archives</a></li>
+                        <li><a href="soumission.html" class="nav-link active">Soumettre</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Soumettre un article</h1>
+            <p>Découvrez nos consignes de soumission et déposez votre manuscrit</p>
+        </div>
+    </section>
+
+    <!-- Submission Section -->
+    <section class="submission-section">
+        <div class="container">
+            <div class="submission-grid">
+                <div class="submission-main">
+                    <!-- Guidelines -->
+                    <div class="guidelines-card">
+                        <h2>Consignes de soumission</h2>
+                        <div class="guideline-section">
+                            <h3>Format et présentation</h3>
+                            <ul>
+                                <li>Les articles doivent comporter entre 8 000 et 12 000 mots (hors bibliographie)</li>
+                                <li>Format Word (.docx) ou LaTeX pour le manuscrit</li>
+                                <li>Police Times New Roman, taille 12, interligne 1,5</li>
+                                <li>Marges de 2,5 cm de chaque côté</li>
+                                <li>Les articles doivent inclure un résumé de 200-300 mots</li>
+                                <li>Mots-clés : 4 à 6 termes indexables</li>
+                                <li>Classification JEL pour les articles d'économie</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-section">
+                            <h3>Style bibliographique</h3>
+                            <p>La revue utilise le style APA (7e édition) pour les références :</p>
+                            <ul>
+                                <li>Dans le texte : (Auteur, Année, p. XX)</li>
+                                <li>Références complètes en fin d'article par ordre alphabétique</li>
+                                <li>DOI requis lorsque disponible</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-section">
+                            <h3>Éléments requis</h3>
+                            <ul>
+                                <li>Page de titre avec nom, affiliation et coordonnées des auteurs</li>
+                                <li>Manuscrit anonymisé (sans mention des auteurs)</li>
+                                <li>Déclaration de conflits d'intérêts</li>
+                                <li>Déclaration de contribution des auteurs (si applicable)</li>
+                                <li>Consentement éthique pour les recherches impliquant des sujets humains</li>
+                            </ul>
+                        </div>
+                        <div class="guideline-section">
+                            <h3>Déclaration</h3>
+                            <p class="declaration-text">
+                                En souettant votre manuscrit, vous certifiez qu'il est original, qu'il n'a pas été 
+                                publié précédemment et qu'il n'est pas en cours d'évaluation dans une autre revue. 
+                                Vous acceptez également les conditions de la licence Creative Commons Attribution 4.0 
+                                International (CC BY 4.0) pour la publication de votre article.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Submission Form -->
+                    <div class="form-card">
+                        <h2>Formulaire de soumission</h2>
+                        <form id="submission-form" class="submission-form">
+                            <!-- Section 1: Type de soumission -->
+                            <div class="form-section">
+                                <h3>Type de soumission</h3>
+                                <div class="form-group">
+                                    <label for="submission-type">Type d'article *</label>
+                                    <select id="submission-type" name="submission-type" required>
+                                        <option value="">Sélectionnez...</option>
+                                        <option value="article">Article de recherche</option>
+                                        <option value="note">Note de recherche</option>
+                                        <option value="review">Compte rendu d'ouvrage</option>
+                                        <option value="special">Article pour numéro spécial</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="special-issue">Numéro spécial (si applicable)</label>
+                                    <select id="special-issue" name="special-issue">
+                                        <option value="">Aucun / Soumission générale</option>
+                                        <option value="transitions-numeriques">Transitions numériques et transformations sociétales</option>
+                                        <option value="developpement-durable">Développement durable et justice sociale</option>
+                                        <option value="gouvernance-mondiale">Gouvernance mondiale et multilatéralisme</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Section 2: Informations sur l'article -->
+                            <div class="form-section">
+                                <h3>Informations sur l'article</h3>
+                                <div class="form-group">
+                                    <label for="article-title">Titre de l'article *</label>
+                                    <input type="text" id="article-title" name="article-title" required 
+                                           placeholder="Entrez le titre complet de votre article">
+                                </div>
+                                <div class="form-group">
+                                    <label for="article-abstract">Résumé * (200-300 mots)</label>
+                                    <textarea id="article-abstract" name="article-abstract" rows="6" required
+                                              placeholder="Rédigez un résumé structuré de votre article"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="article-keywords">Mots-clés * (4 à 6 termes, séparés par des virgules)</label>
+                                    <input type="text" id="article-keywords" name="article-keywords" required
+                                           placeholder="ex: politique monétaire, inflation, zone euro">
+                                </div>
+                                <div class="form-group">
+                                    <label for="jel-codes">Codes JEL (économie uniquement)</label>
+                                    <input type="text" id="jel-codes" name="jel-codes"
+                                           placeholder="ex: E31, E52, F45">
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Discipline -->
+                            <div class="form-section">
+                                <h3>Discipline principale *</h3>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="discipline" value="economie" required>
+                                        <span>Économie</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="discipline" value="droit">
+                                        <span>Droit</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="discipline" value="sciences-humaines">
+                                        <span>Sciences Humaines</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="discipline" value="interdisciplinaire">
+                                        <span>Interdisciplinaire</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Section 4: Auteurs -->
+                            <div class="form-section">
+                                <h3>Auteur correspondant</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="author-name">Nom complet *</label>
+                                        <input type="text" id="author-name" name="author-name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="author-email">Email institutionnel *</label>
+                                        <input type="email" id="author-email" name="author-email" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="author-affiliation">Institution de rattachement *</label>
+                                        <input type="text" id="author-affiliation" name="author-affiliation" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="author-orcid">ORCID (optionnel)</label>
+                                        <input type="text" id="author-orcid" name="author-orcid" 
+                                               placeholder="https://orcid.org/XXXX-XXXX-XXXX-XXXX">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="co-authors">Co-auteurs (le cas échéant)</label>
+                                    <textarea id="co-authors" name="co-authors" rows="3"
+                                              placeholder="Nom, Institution (un par ligne)"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Section 5: Fichiers -->
+                            <div class="form-section">
+                                <h3>Fichiers</h3>
+                                <div class="file-upload-area" id="drop-zone">
+                                    <div class="upload-icon">📎</div>
+                                    <p><strong>Glissez-déposez vos fichiers ici</strong></p>
+                                    <p>ou</p>
+                                    <label for="file-input" class="btn btn-secondary">Parcourir les fichiers</label>
+                                    <input type="file" id="file-input" multiple accept=".doc,.docx,.pdf,.tex">
+                                    <div class="file-list" id="file-list"></div>
+                                </div>
+                                <div class="file-requirements">
+                                    <h4>Documents requis :</h4>
+                                    <ul>
+                                        <li>Manuscrit anonymisé (PDF ou Word) *</li>
+                                        <li>Page de titre avec auteurs (PDF ou Word) *</li>
+                                        <li>Déclaration de conflits d'intérêts (PDF)</li>
+                                        <li>Formulaire de consentement éthique (si applicable)</li>
+                                    </ul>
+                                    <p><strong>Taille maximale par fichier :</strong> 10 Mo</p>
+                                </div>
+                            </div>
+
+                            <!-- Section 6: Déclarations -->
+                            <div class="form-section">
+                                <h3>Déclarations et consentement</h3>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="originality" required>
+                                        <span>Je certifie que cet article est original et n'a pas été publié ailleurs *</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="not-submitted" required>
+                                        <span>Je certifie que l'article n'est pas en cours d'évaluation dans une autre revue *</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cc-license" required>
+                                        <span>J'accepte que mon article soit publié sous licence CC BY 4.0 *</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="data-availability">
+                                        <span>Je m'engage à partager les données de recherche sur demande</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ethics-approval">
+                                        <span>Mon étude a reçu l'approbation d'un comité d'éthique (si applicable)</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary">Enregistrer le brouillon</button>
+                                <button type="submit" class="btn btn-primary">Soumettre l'article</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="submission-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Calendrier éditorial</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-date">Soumission</span>
+                                <span class="timeline-status">En continu</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Premier retour</span>
+                                <span class="timeline-status">6-8 semaines</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Décision finale</span>
+                                <span class="timeline-status">12-16 semaines</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">Publication</span>
+                                <span class="timeline-status">Après acceptation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Frais de publication</h3>
+                        <p class="fees-note">La revue est en accès ouvert <strong>sans frais</strong> pour les auteurs.</p>
+                        <p>Les coûts de publication sont couverts par nos partenaires institutionnels.</p>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Contact</h3>
+                        <p>Une question sur votre soumission ?</p>
+                        <a href="mailto:redaction@revue-scientifique.fr" class="btn btn-outline">Contacter la rédaction</a>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>Liens utiles</h3>
+                        <ul class="useful-links">
+                            <li><a href="#">Instructions aux auteurs (PDF)</a></li>
+                            <li><a href="#">Guide de style APA</a></li>
+                            <li><a href="#">Modèles d'article</a></li>
+                            <li><a href="#">FAQ soumission</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">📚</span>
+                        <div class="logo-text">
+                            <span class="logo-title">Revue Scientifique</span>
+                            <span class="logo-subtitle">Multidisciplinaire</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Une publication scientifique de référence en économie, droit et sciences humaines.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>La Revue</h4>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="soumission.html">Soumettre</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Revue Scientifique Multidisciplinaire. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
