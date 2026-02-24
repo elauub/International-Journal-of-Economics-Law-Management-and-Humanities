@@ -1,88 +1,207 @@
-/* ==================================================== */
-/* ====== NOUVEAU STYLE AMÉLIORÉ - SECTION INDEXATION ====== */
-/* ==================================================== */
+/* ============================================= */
+/* ====== FICHIER DE STYLE COMPLET ET CORRIGÉ ====== */
+/* ============================================= */
 
+/* -- Styles de base -- */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff; /* Fond blanc simple pour la propreté */
+}
+
+/* -- Header et Navigation -- */
+header {
+    background: #004466;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    background: #005580;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #0077b3;
+}
+
+/* -- Bannière (qui avait disparu) -- */
+.banner {
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    border: none;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/* -- Contenu principal -- */
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+h2 {
+    color: #004466;
+    border-bottom: 2px solid #004466;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+/* -- NOUVEAU STYLE CORRIGÉ - Section Indexation -- */
 #indexing {
     background-color: #f8f9fa;
-    padding: 2.5rem 1.5rem; /* Plus d'espace vertical */
+    padding: 2.5rem 1.5rem;
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
     text-align: center;
 }
 
-#indexing h2 {
-    margin-bottom: 1rem;
-}
-
 #indexing p {
     max-width: 750px;
-    margin: 0 auto 2.5rem auto; /* Plus d'espace sous le paragraphe */
+    margin: 0 auto 2.5rem auto;
     color: #495057;
 }
 
-/* LA GRILLE DE LOGOS */
 .logos-container {
     display: grid;
-    /* Crée une grille responsive de 2 ou 4 colonnes */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 1.5rem; /* Espace entre les cartes */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     max-width: 900px;
-    margin: 0 auto; /* Centrer la grille */
+    margin: 0 auto;
 }
 
-/* LA CARTE POUR CHAQUE LOGO */
 .logo-item {
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 1.5rem;
-    display: flex; /* Permet de centrer parfaitement le logo */
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px; /* Hauteur fixe pour toutes les cartes */
+    height: 100px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo-item:hover {
-    transform: translateY(-5px); /* Effet de soulèvement au survol */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Ombre plus prononcée */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* LE LOGO LUI-MÊME */
 .logo-item img {
     max-width: 100%;
-    max-height: 55px; /* Hauteur max pour le logo DANS la carte */
+    max-height: 55px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7; /* Le rend un peu plus subtil */
-    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.logo-item:hover img {
-    filter: grayscale(0%); /* Couleurs originales au survol de la CARTE */
-    opacity: 1;
-}
-
-/* LE NUMÉRO ISSN */
 .issn-info {
-    margin-top: 3rem; /* Plus d'espace au-dessus */
+    margin-top: 3rem;
     padding: 0.75rem 1.5rem;
     border: 1px solid #004466;
-    border-radius: 50px; /* Forme de badge/pilule */
-    display: inline-block; /* Pour que le badge ne prenne pas toute la largeur */
+    border-radius: 50px;
+    display: inline-block;
     background-color: #fff;
 }
 
 .issn-info strong {
     font-size: 1.1rem;
     color: #004466;
-    letter-spacing: 1px; /* Espace un peu les caractères */
+    letter-spacing: 1px;
 }
 
-/* Pour les écrans plus petits (téléphones) */
+/* -- Boutons de soumission -- */
+.submission-button-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+.submission-button {
+    display: inline-block;
+    background-color: #004466;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.submission-button:hover {
+    background-color: #0077b3;
+    transform: translateY(-2px);
+}
+.small-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* -- Footer -- */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #333;
+    color: #fff;
+}
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* -- Pour les écrans plus petits (responsive) -- */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
     .logos-container {
-        /* Passe à 2 colonnes sur les écrans plus petits */
         grid-template-columns: repeat(2, 1fr);
     }
 }
