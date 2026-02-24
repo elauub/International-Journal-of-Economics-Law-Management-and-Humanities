@@ -1,30 +1,57 @@
-/* Styles pour le bouton de soumission */
-.submission-button-container {
+/* ======================================= */
+/* ====== STYLE POUR LA SECTION INDEXATION ====== */
+/* ======================================= */
+
+#indexing {
+    background-color: #f8f9fa; /* Une couleur de fond très claire pour la démarquer */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
     text-align: center;
-    margin: 3rem 0;
 }
 
-.submission-button {
-    display: inline-block;
-    background-color: #004466;
-    color: #fff;
-    padding: 15px 30px;
+#indexing p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.logo-item {
+    padding: 1rem;
+    flex-basis: 150px; /* Base de la largeur pour chaque logo */
+}
+
+.logo-item img {
+    width: 100%;
+    height: auto;
+    max-height: 60px; /* Hauteur maximale pour uniformiser */
+    object-fit: contain;
+    filter: grayscale(100%); /* Effet nuances de gris par défaut */
+    transition: filter 0.3s ease-in-out; /* Transition douce */
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%); /* Retour aux couleurs originales au survol */
+}
+
+.issn-info {
+    margin-top: 2.5rem;
     font-size: 1.2rem;
     font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #333;
 }
 
-.submission-button:hover {
-    background-color: #0077b3;
-    transform: translateY(-2px); /* Léger effet de soulèvement au survol */
-}
-
-.small-text {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 1rem;
+/* Modification pour le footer */
+footer p {
+    margin: 0.5rem 0; /* Ajout d'un peu d'espace dans le footer */
 }
