@@ -21,20 +21,38 @@
     </header>
     <main>
         <section>
-            <h2>Directives de soumission</h2>
-            <p>Les manuscrits doivent être soumis en format Microsoft Word ou PDF. Ils doivent être originaux et ne pas avoir été publiés ou soumis ailleurs.</p>
-            <h3>Formatage</h3>
-            <ul>
-                <li>Police : Times New Roman, taille 12</li>
-                <li>Interligne : double</li>
-                <li>Marges : 2,5 cm de chaque côté</li>
-                <li>Le manuscrit doit inclure un résumé de 250 mots maximum et 5 mots-clés.</li>
-            </ul>
+            <h2>Soumettre un article</h2>
+            <p>Veuillez remplir le formulaire ci-dessous pour soumettre les informations de votre manuscrit. Après avoir rempli le formulaire, veuillez envoyer le fichier complet de votre article (en format .doc, .docx ou .pdf) par email à <strong>ayoub.elassali@gmail.com</strong>.</p>
+            
+            <!-- INSTRUCTION IMPORTANTE : Remplacez "VOTRE_ID_UNIQUE" par votre propre ID Formspree -->
+            <form action="https://formspree.io/f/VOTRE_ID_UNIQUE" method="POST" class="submission-form">
+                <div class="form-group">
+                    <label for="name">Nom complet de l'auteur principal :</label>
+                    <input type="text" id="name" name="Nom de l'auteur" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email de contact :</label>
+                    <input type="email" id="email" name="Email de l'auteur" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Titre du manuscrit :</label>
+                    <input type="text" id="title" name="Titre du manuscrit" required>
+                </div>
+                <div class="form-group">
+                    <label for="abstract">Résumé (250 mots maximum) :</label>
+                    <textarea id="abstract" name="Résumé" rows="8" required></textarea>
+                </div>
+                 <div class="form-group">
+                    <label for="keywords">Mots-clés (séparés par des virgules) :</label>
+                    <input type="text" id="keywords" name="Mots-clés" required>
+                </div>
+                <button type="submit" class="button">Envoyer les informations</button>
+            </form>
+        </section>
+        
+        <section>
             <h3>Frais de soumission</h3>
-            <p>Les frais de soumission s'élèvent à <strong>700 euros</strong>. Ces frais couvrent les coûts du processus d'évaluation par les pairs et de publication. Le paiement peut être effectué par virement bancaire après l'acceptation initiale du manuscrit.</p>
-            <h3>Processus de soumission</h3>
-            <p>Veuillez envoyer votre manuscrit par email à <a href="mailto:soumissions@ijelmh.org">soumissions@ijelmh.org</a>.</p>
-            <p><strong>Date limite pour le prochain numéro :</strong> 28 février 2026</p>
+            <p>Les frais de soumission s'élèvent à <strong>700 euros</strong>. Ces frais ne sont dus qu'après l'acceptation de votre article pour publication. Les instructions de paiement vous seront envoyées par email.</p>
         </section>
     </main>
     <footer>
