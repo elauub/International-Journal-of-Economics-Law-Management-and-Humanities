@@ -137,9 +137,13 @@ h2 {
 }
 
 .logo-item img {
-    max-width: 100%;
-    max-height: 55px;
-    object-fit: contain;
+    display: block;     /* Force l'image à se comporter comme un bloc */
+    width: auto;        /* Laisse le navigateur calculer la largeur... */
+    height: auto;       /* ...et la hauteur pour garder les proportions */
+    max-width: 100%;    /* L'image ne dépassera JAMAIS la largeur de la carte */
+    max-height: 60px;   /* L'image ne dépassera JAMAIS 60px de haut */
+    margin: 0 auto;     /* Centre l'image horizontalement dans la carte */
+    object-fit: contain;/* S'assure que toute l'image est visible et redimensionnée */
 }
 
 .issn-info {
