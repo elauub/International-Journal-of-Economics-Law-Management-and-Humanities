@@ -3,8 +3,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
     color: #333;
+    /* Arrière-plan subtil - vous pouvez changer l'URL de l'image */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/grey-sand.png');
+    background-attachment: fixed;
 }
 
 header {
@@ -12,6 +14,7 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header h1 {
@@ -35,18 +38,46 @@ nav ul li a {
     text-decoration: none;
     padding: 1rem 2rem;
     display: inline-block;
+    transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
     background: #0077b3;
 }
 
+/* Style de la nouvelle bannière */
+.banner {
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.banner-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    border: none;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
 main {
     width: 80%;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
     background: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
 section {
@@ -67,16 +98,20 @@ a {
     color: #0077b3;
 }
 
-a.button {
+a.button, .button {
     display: inline-block;
     background: #004466;
     color: #fff;
-    padding: 10px 15px;
+    padding: 12px 20px;
     text-decoration: none;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-a.button:hover {
+a.button:hover, .button:hover {
     background: #005580;
 }
 
@@ -85,7 +120,34 @@ footer {
     padding: 1rem;
     background: #333;
     color: #fff;
-    position: relative;
-    bottom: 0;
+}
+
+/* Styles pour le formulaire de soumission */
+.submission-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
     width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important */
+}
+
+.form-group textarea {
+    resize: vertical;
 }
