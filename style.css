@@ -1,6 +1,6 @@
-/* ======================================================= */
-/* ====== FICHIER DE STYLE COMPLET, FINAL ET CORRIGÉ ====== */
-/* ======================================================= */
+/* ================================================================= */
+/* ====== FICHIER DE STYLE COMPLET, FINAL ET À JOUR (2024-10-27) ====== */
+/* ================================================================= */
 
 /* -- Styles de base -- */
 body {
@@ -94,6 +94,27 @@ h2 {
     border-bottom: 2px solid #004466;
     padding-bottom: 0.5rem;
     font-size: 2rem;
+}
+
+/* -- Bannière d'Annonce Spéciale -- */
+.announcement-banner {
+    background-color: #e7f5ff;
+    border-left: 6px solid #0077b3;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.announcement-banner h2 {
+    color: #004466;
+    border-bottom: none;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.announcement-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* -- Section Articles Récents -- */
@@ -210,7 +231,7 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* -- Section Stats (Marketing) - ENTIÈREMENT CORRIGÉE -- */
+/* -- Section Stats (Marketing) -- */
 #stats {
     background-color: #004466;
     color: #fff;
@@ -236,7 +257,7 @@ h2 {
     background: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 8px;
-    color: #ffffff; /* << LA CORRECTION EST ICI */
+    color: #ffffff;
 }
 
 .stat-number {
@@ -290,4 +311,12 @@ footer p {
     margin: 0.5rem 0;
 }
 
-/* -- Responsive pour les écrans plus petits --
+/* -- Responsive pour les écrans plus petits -- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
