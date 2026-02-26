@@ -210,7 +210,7 @@ h2 {
     margin-top: 1rem;
 }
 
-/* -- Style pour la nouvelle page de publication (Archives) -- */
+/* -- Style pour la page de publication d'un numéro (numero-v1-n1.html) -- */
 .issue-header {
     text-align: center;
     padding: 1rem;
@@ -283,6 +283,38 @@ h2 {
     background-color: #005580;
 }
 
+/* -- Style pour la nouvelle page listant tous les numéros (archives.html) -- */
+.issue-list-container {
+    margin-top: 2rem;
+}
+
+.issue-link-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.issue-link-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.issue-link-card h3 {
+    margin: 0;
+}
+
+.issue-link-card h3 a {
+    text-decoration: none;
+    color: #004466;
+    font-size: 1.5rem;
+}
+
+.issue-link-card p {
+    margin: 0.5rem 0 0 0;
+    color: #555;
+}
 
 /* -- Footer -- */
 footer {
