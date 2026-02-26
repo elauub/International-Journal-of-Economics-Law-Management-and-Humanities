@@ -117,55 +117,6 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-/* -- Section Articles Récents -- */
-#recent-articles {
-    text-align: center;
-}
-
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.article-card {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.article-card h3 {
-    color: #004466;
-    font-size: 1.3rem;
-    margin-top: 0;
-}
-
-.article-card .authors {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-}
-
-.read-more {
-    display: inline-block;
-    align-self: flex-start;
-    text-decoration: none;
-    color: #0077b3;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.read-more:hover {
-    color: #004466;
-}
-
 /* -- Section Indexation -- */
 #indexing {
     background-color: #f8f9fa;
@@ -231,47 +182,6 @@ h2 {
     letter-spacing: 1px;
 }
 
-/* -- Section Stats (Marketing) -- */
-#stats {
-    background-color: #004466;
-    color: #fff;
-    text-align: center;
-    padding: 3rem 1.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-
-#stats h2 {
-    color: #fff;
-    border-bottom-color: #fff;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2.5rem;
-}
-
-.stat-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 8px;
-    color: #ffffff;
-}
-
-.stat-number {
-    font-size: 3.5rem;
-    font-weight: bold;
-    display: block;
-}
-
-.stat-label {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    opacity: 0.9;
-}
-
 /* -- Boutons de soumission -- */
 .submission-button-container {
     text-align: center;
@@ -300,6 +210,80 @@ h2 {
     margin-top: 1rem;
 }
 
+/* -- Style pour la nouvelle page de publication (Archives) -- */
+.issue-header {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #004466;
+    margin-bottom: 2rem;
+}
+
+.issue-header h2 {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+
+.issue-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0;
+}
+
+.table-of-contents {
+    margin-top: 2rem;
+}
+
+.toc-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 1.5rem;
+}
+
+.toc-entry:last-child {
+    border-bottom: none;
+}
+
+.toc-info {
+    flex-grow: 1;
+}
+
+.toc-title {
+    font-size: 1.3rem;
+    color: #004466;
+    margin: 0 0 0.5rem 0;
+}
+
+.toc-authors {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+}
+
+.toc-actions {
+    flex-shrink: 0;
+}
+
+.toc-download-btn {
+    display: inline-block;
+    background-color: #0077b3;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.toc-download-btn:hover {
+    background-color: #005580;
+}
+
+
 /* -- Footer -- */
 footer {
     text-align: center;
@@ -318,5 +302,13 @@ footer p {
     }
     .logos-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .toc-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
 }
