@@ -1,10 +1,86 @@
 /* ================================================================= */
-/* ====== FICHIER DE STYLE COMPLET - INCLUANT LA NOUVELLE ARCHIVE ====== */
+/* ====== FICHIER DE STYLE COMPLET, FINAL ET CORRIGÉ (2024-10-27) ====== */
 /* ================================================================= */
 
-/* ... (tous les styles précédents : body, header, nav, banner, etc.) ... */
+/* -- Styles de base -- */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
 
-/* -- Style pour la nouvelle page principale des archives -- */
+/* -- Header et Navigation -- */
+header {
+    background: #004466;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    background: #005580;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #0077b3;
+}
+
+/* -- Contenu principal -- */
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+h2 {
+    color: #004466;
+    border-bottom: 2px solid #004466;
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+/* -- Bannière d'Annonce Spéciale -- */
+.announcement-banner {
+    background-color: #e7f5ff;
+    border-left: 6px solid #0077b3;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+/* == STYLE POUR LA NOUVELLE GRILLE D'ARCHIVES (PAGE archives.html) == */
 .archive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -69,4 +145,95 @@
     font-size: 1.5rem;
 }
 
-/* ... (le reste de vos styles : toc-entry, footer, etc.) ... */
+/* -- Style pour la page de publication d'un numéro -- */
+.issue-header {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid #004466;
+    margin-bottom: 2rem;
+}
+
+.issue-header h2 {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+
+.issue-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0;
+}
+
+.table-of-contents {
+    margin-top: 2rem;
+}
+
+.toc-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    gap: 1.5rem;
+}
+
+.toc-entry:last-child {
+    border-bottom: none;
+}
+
+.toc-info {
+    flex-grow: 1;
+}
+
+.toc-title {
+    font-size: 1.3rem;
+    color: #004466;
+    margin: 0 0 0.5rem 0;
+}
+
+.toc-authors {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+}
+
+.toc-actions {
+    flex-shrink: 0;
+}
+
+.toc-download-btn {
+    display: inline-block;
+    background-color: #0077b3;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.toc-download-btn:hover {
+    background-color: #005580;
+}
+
+/* -- Footer -- */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #333;
+    color: #fff;
+}
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* -- Responsive -- */
+@media (max-width: 600px) {
+    .toc-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
