@@ -1,5 +1,5 @@
 /* ================================================================= */
-/* ====== FICHIER DE STYLE COMPLET, FINAL ET CORRIGÉ (2024-10-27) ====== */
+/* ====== FICHIER DE STYLE COMPLET, FINAL ET GARANTI (2024-10-27) ====== */
 /* ================================================================= */
 
 /* -- Styles de base -- */
@@ -20,12 +20,10 @@ header {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
 header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
-
 nav ul {
     padding: 0;
     list-style: none;
@@ -33,11 +31,9 @@ nav ul {
     text-align: center;
     margin: 0;
 }
-
 nav ul li {
     display: inline;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -45,9 +41,31 @@ nav ul li a {
     display: inline-block;
     transition: background-color 0.3s;
 }
-
 nav ul li a:hover {
     background: #0077b3;
+}
+
+/* -- Bannière de la page d'accueil -- */
+.banner {
+    height: 400px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.banner-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    border: none;
+}
+.banner-text p {
+    font-size: 1.5rem;
+    font-style: italic;
 }
 
 /* -- Contenu principal -- */
@@ -58,12 +76,10 @@ main {
     padding: 1rem;
     background: #fff;
 }
-
 section {
     margin-bottom: 2rem;
     padding: 1rem;
 }
-
 h2 {
     color: #004466;
     border-bottom: 2px solid #004466;
@@ -80,19 +96,17 @@ h2 {
     border-radius: 8px;
 }
 
-/* == STYLE POUR LA NOUVELLE GRILLE D'ARCHIVES (PAGE archives.html) == */
+/* -- Grille des Archives (pour archives.html) -- */
 .archive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
-
 .volume-card {
     background-color: #004466;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .volume-card a {
     display: block;
     padding: 2rem;
@@ -100,28 +114,24 @@ h2 {
     text-decoration: none;
     color: #fff;
 }
-
 .volume-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 68, 102, 0.3);
 }
-
 .volume-card h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.8rem;
 }
-
 .volume-card p {
     margin: 0;
     font-size: 1.1rem;
     opacity: 0.8;
 }
 
-/* -- Style pour la page listant les numéros d'un volume -- */
+/* -- Liste des Numéros (pour volume-X.html) -- */
 .issue-list-container {
     margin-top: 2rem;
 }
-
 .issue-link-card {
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -130,44 +140,37 @@ h2 {
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
 }
-
 .issue-link-card:hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
 .issue-link-card h3 {
     margin: 0;
 }
-
 .issue-link-card h3 a {
     text-decoration: none;
     color: #004466;
     font-size: 1.5rem;
 }
 
-/* -- Style pour la page de publication d'un numéro -- */
+/* -- Page de publication d'un numéro (table des matières) -- */
 .issue-header {
     text-align: center;
     padding: 1rem;
     border-bottom: 2px solid #004466;
     margin-bottom: 2rem;
 }
-
 .issue-header h2 {
     border-bottom: none;
     margin-bottom: 0.5rem;
 }
-
 .issue-header p {
     font-size: 1.2rem;
     color: #555;
     margin-top: 0;
 }
-
 .table-of-contents {
     margin-top: 2rem;
 }
-
 .toc-entry {
     display: flex;
     justify-content: space-between;
@@ -176,31 +179,25 @@ h2 {
     border-bottom: 1px solid #e0e0e0;
     gap: 1.5rem;
 }
-
 .toc-entry:last-child {
     border-bottom: none;
 }
-
 .toc-info {
     flex-grow: 1;
 }
-
 .toc-title {
     font-size: 1.3rem;
     color: #004466;
     margin: 0 0 0.5rem 0;
 }
-
 .toc-authors {
     margin: 0;
     font-style: italic;
     color: #333;
 }
-
 .toc-actions {
     flex-shrink: 0;
 }
-
 .toc-download-btn {
     display: inline-block;
     background-color: #0077b3;
@@ -213,9 +210,21 @@ h2 {
     transition: background-color 0.3s;
     white-space: nowrap;
 }
-
 .toc-download-btn:hover {
     background-color: #005580;
+}
+
+/* -- Boutons -- */
+.submission-button {
+    display: inline-block;
+    background-color: #004466;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* -- Footer -- */
@@ -232,8 +241,4 @@ footer p {
 /* -- Responsive -- */
 @media (max-width: 600px) {
     .toc-entry {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-}
+       
